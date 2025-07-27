@@ -1,0 +1,82 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b274edf26f.js" crossorigin="anonymous"></script>
+   <title> {% block title %}Soccer prediction guide{% endblock %}</title>
+
+ <link rel="stylesheet" href="{% static 'style.css' %}">
+<!--<link rel="stylesheet" href="bootstrap/css/bootstrap.rtl.min.css">-->
+    <script src="https://kit.fontawesome.com/b274edf26f.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/bmp" href="images/logo.BMP">
+</head>
+<body data-league="epl">
+<header>
+<nav class="navbar">
+<a href="{% url 'index' %}" class="nav-branding">Home</a>
+
+<ul class="nav-menu">
+<li class="nav-item">
+<a href="{% url 'england' %}" class="nav-link">England</a>
+</li>
+
+<li class="nav-item">
+<a href="{% url 'spain' %}" class="nav-link">Spain</a>
+</li>
+
+<li class="nav-item">
+<a href="{% url 'italy' %}" class="nav-link">Italy</a>
+</li>
+</ul>
+<div class="hamburger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span> 
+</div>
+</nav>
+
+</header>
+<main>
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </main>
+
+    <div class="footer">
+        
+  <p><strong>Punters League</strong> is your go-to platform for football predictions and stats.</p>
+
+  <ul class="footer-links">
+    <li><a href="{% url 'index' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'blog' %}">Blog</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+  </ul>
+
+  <form class="newsletter-form">
+    <label for="newsletter-email">Subscribe:</label><br>
+    <input type="email" id="newsletter-email" placeholder="Email address">
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <p>Follow us on:</p>
+  <div class="social-icons">
+    <a href="https://facebook.com/profile.php?id=61579007960417" target="_blank"><img src="{% static 'images/facebookicon.PNG' %}" alt="Facebook"></a>
+    <a href="https://x.com/PuntersLeague1" target="_blank"><img src="{% static 'images/xicon.PNG' %}" alt="X"></a>
+    <a href="https://www.youtube.com/channel/UClNp2eY92X1psjFR2cP-Rnw" target="_blank" target="_blank"><img src="{% static 'images/youtube-image.PNG' %}" alt="YouTube"></a>
+  </div>
+
+  <p class="disclaimer">Disclaimer: Predictions are for entertainment only. Gamble responsibly. 18+</p>
+ <p>Email: admin@puntersblog.com</p>
+  <p>&copy; 2025 Punters League. All rights reserved.</p>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/date1.js' %}"></script>
+<script src="{% static 'js/script2.js' %}"></script>
+<script src="{% static 'js/script3.js' %}"></script>
+</body>
+</html>

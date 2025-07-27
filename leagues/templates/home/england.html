@@ -1,0 +1,132 @@
+
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}English Leagues{% endblock %}
+
+
+
+
+<div>
+<!--
+<div class="socials1">
+<p>Follow us on <img src="{% static 'images/facebookicon.PNG' %}" alt ="facebook icon" height="45px" width="50px">
+ <img src="{% static 'images/xicon.PNG' %}" alt ="X icon" height="50px" width="50px">
+ </p>
+ <p id="time"></p>
+
+-->
+</div>
+<img src="{% static 'images/barclayslogo.JPEG' %}" alt ="Premiership logo" height="50px" width="50px">
+{% block content %}
+<div class="premiership">
+<p>This page is for the analysis of the English  Premier League (EPL)</p>
+<h2>English Premiership Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="leagueTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
+</div>
+<div class="Championship">
+<p>This page is for the analysis of the English  Championship (EFL)</p>
+<h2>English Championship Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="englishChampionshipScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
+</div>
+
+<div class="LeagueOne">
+<p>This page is for the analysis of the English  League One</p>
+<h2>English League One Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="englishLeagueOneScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
+</div>
+
+
+<h2>English League Two Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="englishLeagueTwoScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
+</div>
+<div class="premiership">
+<p>The total goals scored in this team last season was <span id="totalGoals"></span> 
+out of 38 games played, which gives a ratio of <span id="goals-ratio"></span> Which is
+<span id="goals-ratio-per-game"></span> goals per game</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+    <div class="footer">
+
+
+ 
+</body>
