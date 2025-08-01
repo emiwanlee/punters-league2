@@ -526,6 +526,42 @@ const leagues =[
 	["Hannover", "Kaiserslautern"]
         ]
     },
+
+    {
+  name: "Italian Serie B 2024‑25",
+  tableId: "italianSerieBBTTS",
+  teams: [
+    { team: "Sassuolo", MP: 38, MW: 25, MD: 7, GF: 78, GA: 38 },
+    { team: "Pisa", MP: 38, MW: 23, MD: 7, GF: 64, GA: 36 },
+    { team: "Spezia", MP: 38, MW: 17, MD: 15, GF: 59, GA: 33 },
+    { team: "Cremonese", MP: 38, MW: 16, MD: 13, GF: 62, GA: 44 },
+    { team: "Juve Stabia", MP: 38, MW: 14, MD: 13, GF: 42, GA: 41 },
+    { team: "Catanzaro", MP: 38, MW: 11, MD: 20, GF: 51, GA: 45 },
+    { team: "Cesena", MP: 38, MW: 14, MD: 11, GF: 46, GA: 47 },
+    { team: "Palermo", MP: 38, MW: 14, MD: 10, GF: 52, GA: 43 },
+    { team: "Bari", MP: 38, MW: 10, MD: 18, GF: 41, GA: 40 },
+    { team: "Sudtirol", MP: 38, MW: 12, MD: 10, GF: 50, GA: 57 },
+    { team: "Modena", MP: 38, MW: 10, MD: 15, GF: 48, GA: 50 },
+    { team: "Carrarese", MP: 38, MW: 11, MD: 12, GF: 39, GA: 49 },
+    { team: "Reggiana", MP: 38, MW: 11, MD: 11, GF: 42, GA: 52 },
+    { team: "Frosinone", MP: 38, MW: 9, MD: 16, GF: 37, GA: 50 },
+    { team: "Salernitana", MP: 38, MW: 9, MD: 9, GF: 37, GA: 50 },
+    { team: "Sampdoria", MP: 38, MW: 6, MD: 17, GF: 25, GA: 49 },
+    { team: "Cittadella", MP: 38, MW: 3, MD: 10, GF: 30, GA: 56 },
+    { team: "Cosenza", MP: 38, MW: 7, MD: 13, GF: 32, GA: 56 }
+  ],
+  matches: [
+    ["Sassuolo", "Pisa"],
+    ["Spezia", "Cremonese"],
+    ["Juve Stabia", "Catanzaro"],
+    ["Cesena", "Palermo"],
+    ["Bari", "Sudtirol"],
+    ["Modena", "Carrarese"],
+    ["Reggiana", "Frosinone"],
+    ["Salernitana", "Sampdoria"],
+    ["Cittadella", "Cosenza"]
+  ]
+},
 ]
 
 leagues.forEach(league => {

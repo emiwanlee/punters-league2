@@ -1,7 +1,7 @@
 
 {% extends "home/base.html" %}
 {% load static %}
-{% block title %}English Championship{% endblock title %}
+{% block title %}French Leagues{% endblock title %}
 
 
 <div>
@@ -38,7 +38,8 @@
 
 </table>
  <h2>My Chart</h2>
-
+</table>
+ 
 </div>
 
 <div class="FrenchLeagueTwo">
@@ -63,6 +64,24 @@
 </table>
  <h2>My Chart</h2>
 
+ <h2>My Chart</h2>
+<table>
+ <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
+  {% for team in french_ligue_1_teams %}
+  <tr><td>{{ forloop.counter}}</td><td>{{ team.name }}</td><td>{{ team.points }}</td><td>{{ team.power }}</td>
+  <td>{{ team.goals_difference }}</td></tr>
+  {% endfor %}
+</table>
+
+</table>
+<h2></h2>
+<table>
+  <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
+  {% for team in french_ligue_2_teams %}
+  <tr><td>{{ forloop.counter}}</td><td>{{ team.name }}</td><td>{{ team.points }}</td><td>{{ team.power }}</td>
+ <td>{{ team.goals_difference }}</td> </tr>
+  {% endfor %}
+</table>
 </div>
 </div>
 <div class="premiership">

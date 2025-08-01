@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const laLiga2Table = document.querySelector("#laLigaScoresTable2 tbody");
   const laliga2PredictionBody = document.querySelector("#predictionsTableSpain2 tbody");
   const italianSerieATable = document.querySelector("#italianSerieAScoresTable tbody");
+   const italianSerieBTable = document.querySelector("#italianSerieBScoresTable tbody");
   const italianSerieAPredictionBody = document.querySelector("#predictionsTableItaly tbody");
+  const italianSerieBPredictionBody = document.querySelector("#predictionsTableItalyB tbody");
    const frenchLigueOneTable = document.querySelector("#frenchLigueOneScoresTable tbody");
   const frenchLigueOnePredictionBody = document.querySelector("#predictionsTableFrench1 tbody");
   const frenchLigueTwoTable = document.querySelector("#frenchLigueTwoScoresTable tbody");
@@ -669,7 +671,10 @@ document.addEventListener("DOMContentLoaded", function () {
     italianSerieAFixtures.forEach(([home, away]) => {
       const homeTeam = italianSerieATeams.find(t => t.team === home);
       const awayTeam = italianSerieATeams.find(t => t.team === away);
-      if (!homeTeam || !awayTeam) return;
+      if (!homeTeam || !awayTeam) {
+  console.warn(`Missing team in fixture: ${home} vs ${away}`);
+  return;
+}
 
       const homePower = homeTeam.power + 10;
       const awayPower = awayTeam.power;
@@ -692,7 +697,7 @@ document.addEventListener("DOMContentLoaded", function () {
       italianSerieAPredictionBody.appendChild(row);
     });
   }
-  /*
+  
   const italianSerieBTeams = [
     { team: "Sassuolo", MP: 38, MW: 24, MD: 10, GF: 59, GA: 27 },
     { team: "Pisa", MP: 38, MW: 24, MD: 9, GF: 79, GA: 35 },
@@ -717,30 +722,30 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const italianSerieBFixtures = [
-    ["Genoa", "Leece"],
-    ["Sassuolo", "Napoli"],
-    ["Roma", "Bologna"],
-	["Milan", "Cremonese"],
-	["Cagliari", "Fiorentina"],
-	["Como", "Lazio"],
-	["Juventus", "Parma"],
-	["Atalanta", "Pisa"],
-	["Udinese", "Verona"],
-	["Inter", "Torino"]
+    ["Spezia", "Carrarese"],
+    ["Sampdoria", "Modena"],
+    ["Empoli", "Padova"],
+	["Palermo", "Reggiana"],
+	["Virtus Entella", "Juve Stabia"],
+	["Catanzaro", "Sudtirol"],
+	["Monza", "Mantova"],
+	["Pescara", "Cesena"],
+	["Venezia", "Bari"],
+	["Frisonone", "Avellino"]
 	
   ];
 
-  italianSerieATeams.forEach(t => {
+  italianSerieBTeams.forEach(t => {
     t.ML = t.MP - (t.MW + t.MD);
     t.GD = t.GF - t.GA;
     t.points = t.MW * 3 + t.MD;
     t.power = (t.points / (t.MP * 3)) * 100;
   });
 
-  italianSerieATeams.sort((a, b) => b.points - a.points);
+  italianSerieBTeams.sort((a, b) => b.points - a.points);
 
-  if (italianSerieATable) {
-    italianSerieATeams.forEach((team, index) => {
+  if (italianSerieBTable) {
+    italianSerieBTeams.forEach((team, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
         <td>${index + 1}</td>
@@ -754,14 +759,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${team.GD}</td>
         <td>${team.points}</td>
       `;
-      laLigaTable.appendChild(row);
+      italianSerieBTable.appendChild(row);
     });
   }
 
-  if (italianSerieAPredictionBody) {
-    italianSerieAFixtures.forEach(([home, away]) => {
-      const homeTeam = italianSerieATeams.find(t => t.team === home);
-      const awayTeam = italianSerieATeams.find(t => t.team === away);
+  if (italianSerieBPredictionBody) {
+    italianSerieBFixtures.forEach(([home, away]) => {
+      const homeTeam = italianSerieBTeams.find(t => t.team === home);
+      const awayTeam = italianSerieBTeams.find(t => t.team === away);
       if (!homeTeam || !awayTeam) return;
 
       const homePower = homeTeam.power + 10;
@@ -782,10 +787,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${awayPower.toFixed(2)}</td>
         <td>${prediction}</td>
       `;
-      italianSerieAPredictionBody.appendChild(row);
+      italianSerieBPredictionBody.appendChild(row);
     });
   }
-  */
+  
   
   const frenchLigueOneTeams = [
     { team: "PSG", MP: 34, MW: 26, MD: 6, GF: 92, GA: 35 },

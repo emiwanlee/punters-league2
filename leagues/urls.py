@@ -20,7 +20,7 @@ urlpatterns = [
     #path('italian_serie_a/', views.ItalianSerieA, name="italian_serie_a"),
     
    
-  
+  #path('league/<int:league_id>/table/', views.league_table, name='league_table'),
    # path('all-teams', views.all_teams_view, name='premiership'),
     #path('championship/', views.english_championship, name='english_championship'),
     # path("team-stats-json/", views.team_stats_json, name="team_stats_json"),

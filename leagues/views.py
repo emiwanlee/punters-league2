@@ -8,6 +8,9 @@ from django.http import HttpResponse
 import io
 from django.utils.timezone import now
 from django.http import JsonResponse
+from .models import Teams, League
+from django.db.models import F, ExpressionWrapper, IntegerField
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 # Dictionary of teams and their win/loss records
@@ -46,9 +49,15 @@ def english_championship(request):
         #'teams_data': teams_data,
         #'league_name': 'English Championship'
     #  })
-    
-     
-
+"""
+def league_table(request, league_id):
+    league =get_object_or_404 (League, id=league_id)
+    teams = Teams.objects.filter(league=league).order_by('-points', '-goals_difference')
+    return render(request, 'home/england.html', {
+        'league': league,
+        'teams': teams
+    })
+"""
 def index_view(request):
     leagues = League.objects.all()
     return render(request, 'home/index.html', {'leagues':leagues})
@@ -60,19 +69,80 @@ def index_view(request):
 
 
 def England(request):
-    return render(request, 'home/england.html')
+    premier_league = League.objects.get(name="Premier League")
+    championship = League.objects.get(name="Championship")
+    league_one = League.objects.get(name="English League One")
+    league_two = League.objects.get(name="English League Two")
+
+    premiership = Teams.objects.filter(league=premier_league).order_by('-points')
+    championship_teams = Teams.objects.filter(league=championship).order_by('-points')
+    league_one_teams = Teams.objects.filter(league=league_one).order_by('-points')
+    league_two_teams = Teams.objects.filter(league=league_two).order_by('-points')
+
+    context = {
+        'premiership': premiership,
+        'championship_teams': championship_teams,
+        'league_one_teams': league_one_teams,
+        'league_two_teams': league_two_teams,
+    }
+    return render(request, 'home/england.html', context)
+    #return render(request, 'home/england.html')
 
 def Spain(request):
-    return render(request, 'home/spain.html')
+    spanish_la_liga = League.objects.get(name="Spanish La Liga")
+    spanishLaLiga2 = League.objects.get(name="Spanish La Liga 2")
+
+    spanishLaLiga_teams= Teams.objects.filter(league=spanish_la_liga).order_by('-points')
+    spanishLaLiga2_teams = Teams.objects.filter(league=spanishLaLiga2).order_by('-points')
+
+    context = {
+        'spanishLaLiga_teams': spanishLaLiga_teams,
+        'spanishLaLiga2_teams': spanishLaLiga2_teams,
+        
+    }
+    return render(request, 'home/spain.html', context)
 
 def Italy(request):
-    return render(request, 'home/italy.html')
+    italian_serie_a = League.objects.get(name="Serie A")
+    italian_serie_b = League.objects.get(name="Serie B")
+
+    italian_serie_a_teams= Teams.objects.filter(league=italian_serie_a).order_by('-points')
+    italian_serie_b_teams = Teams.objects.filter(league=italian_serie_b).order_by('-points')
+
+    context = {
+        'italian_serie_a_teams': italian_serie_a_teams,
+        'italian_serie_b_teams': italian_serie_b_teams,
+        
+    }
+    return render(request, 'home/italy.html', context)
 
 def Germany(request):
-    return render(request, 'home/germany.html')
+    german_bundesliga = League.objects.get(name="Bundesliga")
+    german_bundesliga_2 = League.objects.get(name="Bundesliga 2")
+
+    german_bundesliga_teams= Teams.objects.filter(league=german_bundesliga).order_by('-points')
+    german_bundesliga_2_teams = Teams.objects.filter(league=german_bundesliga_2).order_by('-points')
+
+    context = {
+        'german_bundesliga_teams': german_bundesliga_teams,
+        'german_bundesliga_2_teams': german_bundesliga_2_teams,
+        
+    }
+    return render(request, 'home/germany.html', context)
 
 def France(request):
-    return render(request, 'home/france.html')
+    french_ligue_1 = League.objects.get(name="Ligue 1")
+    french_ligue_2 = League.objects.get(name="Ligue 2")
+
+    french_ligue_1_teams= Teams.objects.filter(league=french_ligue_1).order_by('-points')
+    french_ligue_2_teams = Teams.objects.filter(league=french_ligue_2).order_by('-points')
+
+    context = {
+        'french_ligue_1_teams': french_ligue_1_teams,
+        'french_ligue_2_teams': french_ligue_2_teams,
+        
+    }
+    return render(request, 'home/france.html', context)
 
 def Netherlands(request):
     return render(request, 'home/netherlands.html')

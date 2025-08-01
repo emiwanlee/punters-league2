@@ -36,8 +36,41 @@
 <tbody></tbody>
 
 </table>
- <h2>My Chart</h2>
 
+<table id="italianSerieBScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
+ <h2>My Chart</h2>
+<table>
+ <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
+  {% for team in italian_serie_a_teams %}
+  <tr><td>{{ forloop.counter}}</td><td>{{ team.name }}</td><td>{{ team.points }}</td><td>{{ team.power }}</td>
+  <td>{{ team.goals_difference }}</td></tr>
+  {% endfor %}
+</table>
+
+</table>
+<h2></h2>
+<table>
+  <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
+  {% for team in italian_serie_b_teams %}
+  <tr><td>{{ forloop.counter}}</td><td>{{ team.name }}</td><td>{{ team.points }}</td><td>{{ team.power }}</td>
+ <td>{{ team.goals_difference }}</td> </tr>
+  {% endfor %}
+</table>
 </div>
 </div>
 </div>
