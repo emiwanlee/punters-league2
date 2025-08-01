@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-@m0c@mvj-hu2lt+u1d0+)j1ctf&11q=+*ogts(0=pr_rve5xn)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','puntersblog.com', 'www.punters-league.com']
 
 
 # Application definition
@@ -76,15 +77,17 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'League_db',         # must match what you created in pgAdmin
-        'USER': 'postgres',
-        'PASSWORD': 'kek-tsk95',  # the password you set during install
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+          'default': dj_database_url.parse(
+        'postgres://postgres:kek-tsk95@localhost:5432/League_db',
+        conn_max_age=600
+    )
 }
+       # 'NAME': 'League_db',         # must match what you created in pgAdmin
+       # 'USER': 'postgres',
+        #'PASSWORD': 'kek-tsk95',  # the password you set during install
+       # 'HOST': 'localhost',
+       # 'PORT': '5432',
+    
 
 
 # Password validation
