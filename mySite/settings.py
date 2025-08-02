@@ -56,13 +56,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'mySite.urls'
@@ -90,9 +91,19 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-          'default': dj_database_url.config(default=os.getenv("DATABASE_URL"), conn_max_age=600)
-    
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'League_db'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'kek-tsk95'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
+    }
 }
+
+# For Render: override database if RENDER is set
+if os.environ.get('RENDER'):
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
        # 'NAME': 'League_db',         # must match what you created in pgAdmin
        # 'USER': 'postgres',
         #'PASSWORD': 'kek-tsk95',  # the password you set during install
