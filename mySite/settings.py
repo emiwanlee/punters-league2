@@ -39,7 +39,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['punters-league.onrender.com','localhost', '127.0.0.1','puntersblog.com', 'www.punters-league.com']
+ALLOWED_HOSTS = ['.onrender.com','localhost', '127.0.0.1','puntersblog.com', 'www.punters-league.com']
 
 
 # Application definition
@@ -89,10 +89,8 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-          'default': dj_database_url.parse(
-        'postgres://postgres:kek-tsk95@localhost:5432/League_db',
-        conn_max_age=600
-    )
+          'default': dj_database_url.config(default=os.getenv("DATABASE_URL"), conn_max_age=600)
+    
 }
        # 'NAME': 'League_db',         # must match what you created in pgAdmin
        # 'USER': 'postgres',
@@ -136,7 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
