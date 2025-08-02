@@ -39,8 +39,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['.onrender.com','localhost', '127.0.0.1','puntersblog.com', 'www.punters-league.com']
+ALLOWED_HOSTS = ["punters-league.com", "www.punters-league.com", "127.0.0.1", "localhost"]
 
+SECURE_SSL_REDIRECT = True
+
+SECURE_SSL_REDIRECT = not DEBUG
 
 # Application definition
 
