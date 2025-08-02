@@ -1,3 +1,4 @@
+
 /*document.addEventListener("DOMContentLoaded", function () {
 const leagues =[
     {
@@ -515,3 +516,5 @@ async function loadTeamCharts() {
     loadTeamCharts();
 
    
+
+    

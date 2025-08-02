@@ -152,10 +152,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "leagues" / "static",  # if you have static inside app
+    BASE_DIR / "static",  # Only this one, not from inside the app again
 ]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles"  # This is for collectstatic in production
 
 
 # Default primary key field type
