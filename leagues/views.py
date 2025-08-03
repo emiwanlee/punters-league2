@@ -89,8 +89,8 @@ def England(request):
     #return render(request, 'home/england.html')
 
 def Spain(request):
-    spanish_la_liga = League.objects.get(name="Spanish La Liga")
-    spanishLaLiga2 = League.objects.get(name="Spanish La Liga 2")
+    spanish_la_liga = League.objects.get(name="La Liga")
+    spanishLaLiga2 = League.objects.get(name="La Liga 2")
 
     spanishLaLiga_teams= Teams.objects.filter(league=spanish_la_liga).order_by('-points')
     spanishLaLiga2_teams = Teams.objects.filter(league=spanishLaLiga2).order_by('-points')
