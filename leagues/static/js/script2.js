@@ -236,18 +236,18 @@ const leagues =[
 	{ team: "Shrewsbury", MP: 46, MW: 8, MD: 9, GF: 41, GA: 79 },
         ],
         matches:[
-           ["Luton", "Wimbledon"],
-   ["Cardiff", "Peterborough"],
-    ["Blackpool", "Stevenage"],
-	["Plymouth", "Barnsley"],
-	["Rotherham", "Port Vale"],
-	["Wigan", "Northampton"],
-	["Bradford", "Wycombe"],
-	["Burton", "Mansfield"],
-	["Lincoln", "Reading"],
-	["Donacaster", "Exeter"],
-	["Huddersfield", "Leyton Orient"],
-	["Stockport", "Bolton"]
+           ["Port Vale", "Cardiff"],
+   ["Reading", "Huddersfield"],
+    ["Peterborough", "Luton"],
+	["Wycombe", "Stockport"],
+	["Exeter", "Blackpool"],
+	["Barnsley", "Burton"],
+	["Stevenage", "Rotherham"],
+	["Wimbledon", "Lincoln"],
+	["Bolton", "Plymouth"],
+	["Northampton", "Bradford"],
+	["Leyton Orient", "Wigan"],
+	["Mansfield", "Doncaster"]
         ]
     },
 
@@ -281,18 +281,18 @@ const leagues =[
 	{ team: "Morecambe", MP: 46, MW: 10, MD: 6, GF: 40, GA: 72 },
         ],
         matches:[
-          ["Colchester", "Tranmere"],
-   ["Chesterfield", "Barrow"],
-    ["Accrington Stanley", "Gillingham"],
-	["Barnet", "Fleetwood"],
-	["Walsall", "Swindon"],
-	["Bristol Rovers", "Harrogate"],
-	["Cambridge", "Cheltenham"],
-	["Grimsby", "Crawley"],
-	["Newport", "Notts County"],
-	["Salford", "Crewe"],
-	//["Shrewsbury", "Leyton Orient"],
-	["Stockport", "Bromley"]
+          ["Tranmere", "Shrewsbury"],
+   ["Notts County", "Salford"],
+    ["Crawley", "Newport"],
+	["Oldham", "Colchester"],
+	["Harrogate", "Grimsby"],
+	["Bromley", "Barnet"],
+	["Gillingham", "Walsall"],
+	["Crewe Alexandra", "Accrington Stanley"],
+	["Swindon", "Cambridge"],
+	["Barrow", "MK Dons"],
+	//["Fleetwood", "Bristol Rovers"],
+	["Cheltenham", "Chesterfield"]
         ]
     },
     
