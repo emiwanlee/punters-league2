@@ -71,8 +71,8 @@ def index_view(request):
 def England(request):
     premier_league = League.objects.get(name="Premier League")
     championship = League.objects.get(name="Championship")
-    league_one = League.objects.get(name="English League One")
-    league_two = League.objects.get(name="English League Two")
+    league_one = League.objects.get(name="League One")
+    league_two = League.objects.get(name="League Two")
 
     premiership = Teams.objects.filter(league=premier_league).order_by('-points')
     championship_teams = Teams.objects.filter(league=championship).order_by('-points')

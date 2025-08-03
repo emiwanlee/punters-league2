@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 from dotenv import load_dotenv
+#from decouple import config
 
 
 load_dotenv()
@@ -29,6 +30,14 @@ DATABASES = {
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -94,25 +103,8 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'League_db'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'kek-tsk95'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
-    }
-}
 
-# For Render: override database if RENDER is set
-if os.environ.get('RENDER'):
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-       # 'NAME': 'League_db',         # must match what you created in pgAdmin
-       # 'USER': 'postgres',
-        #'PASSWORD': 'kek-tsk95',  # the password you set during install
-       # 'HOST': 'localhost',
-       # 'PORT': '5432',
+
     
 
 
@@ -154,9 +146,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Only this one, not from inside the app again
-]
+#STATICFILES_DIRS = [
+#    BASE_DIR / "static",  # Only this one, not from inside the app again
+#]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # This is for collectstatic in production
 
