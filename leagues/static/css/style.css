@@ -327,7 +327,10 @@ background-color:red;
 .row{
   display: flex;
 }
-
+.bttsHeader{
+  float:center;
+  margin-left: 330px;
+}
 .footer {
   background-color: #111;
   color: #eee;
