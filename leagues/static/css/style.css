@@ -322,6 +322,11 @@ background-color:red;
 .social-icons img:hover {
   transform: scale(1.1);
 }
+/* Fitures in the league pages */
+
+.row{
+  display: flex;
+}
 
 .footer {
   background-color: #111;
