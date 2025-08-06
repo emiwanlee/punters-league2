@@ -160,7 +160,7 @@ def Netherlands(request):
     
 
      context = {
-        'nerherlands_eredevesie_teams': netherlands_eredevesie_teams,
+        'nertherlands_eredevesie_teams': netherlands_eredevesie_teams,
         
         
      }

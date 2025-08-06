@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const germanBundesligaPredictionBody = document.querySelector("#predictionsTableGermany tbody");
   const germanBundesliga2Table = document.querySelector("#germanBundesliga2ScoresTable tbody");
   const germanBundesliga2PredictionBody = document.querySelector("#predictionsTableGermany2 tbody");
-  const netherlandsEredevesieTable = document.querySelector("#netherlandseredevesieScoresTable tbody");
+  const netherlandsEredevesieTable = document.querySelector("#netherlandsEredevesieScoresTable tbody");
   const netherlandsEredevesiePredictionBody = document.querySelector("#predictionsTableNetherlands tbody");
 
   const teams = [
