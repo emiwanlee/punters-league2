@@ -167,6 +167,7 @@ const leagues =[
 	["Real Madrid", "Osasuna"]
         ]
     },
+
     {
         name:"English Championship",
         tableId: 'eflBTTS',
@@ -566,7 +567,7 @@ const leagues =[
 
  {
   name: "Netherlands Eredevesie 2024‑25",
-  tableId: "netherlandseredevesieBTTS",
+  tableId: "netherlandsEredevesieBTTS",
   teams: [
      { team: "PSV", MP: 34, MW: 25, MD: 4, GF: 103, GA: 39 },
     { team: "Ajax", MP: 34, MW: 24, MD: 6, GF: 67, GA: 32 },
@@ -593,7 +594,7 @@ const leagues =[
     ["Feyenoord", "NAC"],
 	["Heerenveen", "Volendam"],
 	["PSV", "Sparta Rotterdam"],
-	["Zwollw", "Lille"],
+	["Zwolle", "Lille"],
 	["Nantes", "Twente"],
 	["AZ Alkmaar", "Groningen"],
 	["Ajax", "Telstar"],
