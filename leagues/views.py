@@ -25,6 +25,14 @@ from django.shortcuts import render
 
 #def all_teams_view(request):
     #return render(request, 'home/premiership.html')  # Replace with actual template
+def league_detail(request, slug):
+    league = get_object_or_404(League, slug=slug)
+    teams = Teams.objects.filter(league=league).order_by('-points', '-goals_difference', '-power')
+    context = {
+        'league': league,
+        'teams': teams,
+    }
+    return render(request, 'leagues/league_detail.html', context)
 
 
 def english_premiership(request):
@@ -145,7 +153,18 @@ def France(request):
     return render(request, 'home/france.html', context)
 
 def Netherlands(request):
-    return render(request, 'home/netherlands.html')
+     netherlands_eredevesie = League.objects.get(name="Eredevesie")
+    
+
+     netherlands_eredevesie_teams= Teams.objects.filter(league=netherlands_eredevesie).order_by('-points')
+    
+
+     context = {
+        'nerherlands_eredevesie_teams': netherlands_eredevesie_teams,
+        
+        
+     }
+     return render(request, 'home/netherland.html', context)
 
 def Belgium(request):
     return render(request, 'home/belgium.html')   

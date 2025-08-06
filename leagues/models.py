@@ -1,12 +1,32 @@
 from django.db import models
+from django.utils.text import slugify
 
 # Create your models here.
 class League(models.Model):
     name = models.CharField(max_length=120)
     country = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+"""
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        slug = base_slug
+        num = 1
+        while League.objects.filter(slug=slug).exists():
+            slug = f"{base_slug}-{count}"
+            count += 1
+        league.slug = slug
+        league.save()
+
+
+"""
+    
+
+ 
     
 class Teams(models.Model) :
     name =models.CharField(max_length=100)

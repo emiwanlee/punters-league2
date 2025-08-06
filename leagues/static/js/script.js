@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const germanBundesligaPredictionBody = document.querySelector("#predictionsTableGermany tbody");
   const germanBundesliga2Table = document.querySelector("#germanBundesliga2ScoresTable tbody");
   const germanBundesliga2PredictionBody = document.querySelector("#predictionsTableGermany2 tbody");
+  const netherlandsEredevesieTable = document.querySelector("#netherlandseredevesieScoresTable tbody");
+  const netherlandsEredevesiePredictionBody = document.querySelector("#predictionsTableNetherlands tbody");
 
   const teams = [
     { team: "Liverpool", MP: 38, MW: 25, MD: 9, GF: 86, GA: 41 },
@@ -1160,4 +1162,98 @@ document.addEventListener("DOMContentLoaded", function () {
       germanBundesliga2PredictionBody.appendChild(row);
     });
   }
+  
+  const netherlandsEredevesieTeams = [
+    { team: "PSV", MP: 34, MW: 25, MD: 4, GF: 103, GA: 39 },
+    { team: "Ajax", MP: 34, MW: 24, MD: 6, GF: 67, GA: 32 },
+    { team: "Feyenoord", MP: 34, MW: 20, MD: 8, GF:76, GA: 38 },
+	{ team: "Utrecht", MP: 34, MW: 18, MD: 10, GF: 62, GA: 45 },
+    { team: "AZ Alkmaar", MP: 34, MW: 16, MD: 9, GF: 58, GA: 37 },
+    { team: "Twente", MP: 34, MW: 15, MD: 9, GF: 62, GA: 49 },
+    { team: "Go Ahead Eagles", MP: 34, MW: 14, MD: 9, GF: 57, GA: 55 },
+    { team: "NEC", MP: 34, MW: 12, MD: 7, GF: 51, GA: 46 },
+    { team: "Heerenveen", MP: 34, MW: 12, MD: 7, GF: 42, GA: 57 },
+	{ team: "Zwolle", MP: 34, MW: 10, MD: 11, GF: 43, GA: 51 },
+	{ team: "Fortuna Sittard", MP: 34, MW: 11, MD: 8, GF: 37, GA: 54 },
+	{ team: "Sparta Rotterdam", MP: 34, MW: 9, MD: 12, GF: 39, GA: 43 },
+	{ team: "Groningen", MP: 34, MW: 10, MD: 9, GF: 40, GA: 53 },
+	{ team: "Heracles", MP: 34, MW: 9, MD: 11, GF: 42, GA: 53 },
+	{ team: "NAC", MP: 34, MW: 8, MD: 9, GF: 34, GA: 58 },
+	{ team: "Wilhelm II", MP: 34, MW: 6, MD: 8, GF: 34, GA: 56 },
+	{ team: "RKC Waalwijk", MP: 34, MW: 6, MD: 7, GF: 44, GA: 74 },
+	{ team: "Almere", MP: 34, MW: 4, MD: 10, GF: 23, GA: 79 },
+	
+  ];
+
+  const netherlandsEredevesieFixtures = [
+    ["Fortuna Sittard", "Go Ahead Eagles"],
+    ["NEC", "Excelsior"],
+    ["Feyenoord", "NAC"],
+	["Heerenveen", "Volendam"],
+	["PSV", "Sparta Rotterdam"],
+	["Zwollw", "Lille"],
+	["Nantes", "Twente"],
+	["AZ Alkmaar", "Groningen"],
+	["Ajax", "Telstar"],
+  ["Utrecht", "Heracles"]
+	
+	
+  ];
+
+  netherlandsEredevesieTeams.forEach(t => {
+    t.ML = t.MP - (t.MW + t.MD);
+    t.GD = t.GF - t.GA;
+    t.points = t.MW * 3 + t.MD;
+    t.power = (t.points / (t.MP * 3)) * 100;
+  });
+
+  netherlandsEredevesieFixtures.sort((a, b) => b.points - a.points);
+
+  if (netherlandsEredevesieTable) {
+    netherlandsEredevesieTeams.forEach((team, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${team.team}</td>
+        <td>${team.MP}</td>
+        <td>${team.MW}</td>
+        <td>${team.MD}</td>
+        <td>${team.ML}</td>
+        <td>${team.GF}</td>
+        <td>${team.GA}</td>
+        <td>${team.GD}</td>
+        <td>${team.points}</td>
+      `;
+      netherlandsEredevesieTable.appendChild(row);
+    });
+  }
+
+  if (netherlandsEredevesiePredictionBody) {
+    netherlandsEredevesieFixtures.forEach(([home, away]) => {
+      const homeTeam = netherlandsEredevesieTeams.find(t => t.team === home);
+      const awayTeam = netherlandsEredevesieTeams.find(t => t.team === away);
+      if (!homeTeam || !awayTeam) return;
+
+      const homePower = homeTeam.power + 10;
+      const awayPower = awayTeam.power;
+      const diff = homePower - awayPower;
+
+      let prediction = "X";
+      if (diff >= 10) prediction = "1 (Home Win)";
+      else if (diff >= 5) prediction = "1X";
+      else if (diff <= -10) prediction = "2 (Away Win)";
+      else if (diff <= -5) prediction = "X2";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${home}</td>
+        <td>${away}</td>
+        <td>${homePower.toFixed(2)}</td>
+        <td>${awayPower.toFixed(2)}</td>
+        <td>${prediction}</td>
+      `;
+      netherlandsEredevesiePredictionBody.appendChild(row);
+    });
+  }
+
 });
