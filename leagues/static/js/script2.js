@@ -517,15 +517,15 @@ const leagues =[
 	
         ],
         matches:[
-          ["Schalke", "Hertha"],
-    ["Darmstadt", "Bochum"],
-    ["Paderborn", "Holstein Kiel"],
-	["Karlsruher", "Preuben Munster"],
-	["Elvesberg", "Nurnberg"],
-	["Arminia", "Dusseldorf"],
-	["Magdeburg", "Braunschweig"],
-	["Geuther Furth", "Dynamo"],
-	["Hannover", "Kaiserslautern"]
+          ["Preußen Münster", "Padeborn"],
+    ["Nurnberg", "Darmstadt"],
+    ["Braunschweig", "Greuther Furth"],
+	["Dusseldorf", "Hannover"],
+	["Dynamo", "Magdeburg"],
+	["Kaiserslautern", "Schalke"],
+	["Holstein Kiel", "Arminia"],
+	["Bochum", "Elvesberg"],
+	["Hertha", "Karlsruher"]
         ]
     },
 

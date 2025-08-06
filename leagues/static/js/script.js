@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const germanBundesliga2PredictionBody = document.querySelector("#predictionsTableGermany2 tbody");
   const netherlandsEredevesieTable = document.querySelector("#netherlandsEredevesieScoresTable tbody");
   const netherlandsEredevesiePredictionBody = document.querySelector("#predictionsTableNetherlands tbody");
+  const netherlandsEerstedevesieTable = document.querySelector("#netherlandsEredevesieScoresTable tbody");
+  const netherlandsEerstedevesiePredictionBody = document.querySelector("#predictionsTableNetherlands tbody");
 
   const teams = [
     { team: "Liverpool", MP: 38, MW: 25, MD: 9, GF: 86, GA: 41 },
@@ -1094,15 +1096,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesliga2Fixtures = [
-    ["Schalke", "Hertha"],
-    ["Darmstadt", "Bochum"],
-    ["Paderborn", "Holstein Kiel"],
-	["Karlsruher", "Preuben Munster"],
-	["Elvesberg", "Nurnberg"],
-	["Arminia", "Dusseldorf"],
-	["Magdeburg", "Braunschweig"],
-	["Geuther Furth", "Dynamo"],
-	["Hannover", "Kaiserslautern"]
+    ["Preußen Münster", "Padeborn"],
+    ["Nurnberg", "Darmstadt"],
+    ["Braunschweig", "Greuther Furth"],
+	["Dusseldorf", "Hannover"],
+	["Dynamo", "Magdeburg"],
+	["Kaiserslautern", "Schalke"],
+	["Holstein Kiel", "Arminia"],
+	["Bochum", "Elvesberg"],
+	["Hertha", "Karlsruher"]
+        
 	
 	
   ];
@@ -1253,6 +1256,97 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${prediction}</td>
       `;
       netherlandsEredevesiePredictionBody.appendChild(row);
+    });
+  }
+
+  const eersteDivisieTeams = [
+    { team: "Volendam", MP: 38, MW: 25, MD: 9, GF: 86, GA: 41 },
+    { team: "Excelsior", MP: 38, MW: 20, MD: 14, GF: 69, GA: 34 },
+    { team: "Cambuur", MP: 38, MW: 21, MD: 8, GF: 72, GA: 44 },
+    { team: "Den Haag", MP: 38, MW: 20, MD: 9, GF: 64, GA: 43 },
+    { team: "Dordrecht", MP: 38, MW: 20, MD: 6, GF: 68, GA: 47 },
+    { team: "De Grafschap", MP: 38, MW: 19, MD: 9, GF: 58, GA: 51 },
+    { team: "Telstar", MP: 38, MW: 16, MD: 13, GF: 66, GA: 59 },
+    { team: "Emmen", MP: 38, MW: 19, MD: 8, GF: 58, GA: 46 },
+    { team: "Den Bosch", MP: 38, MW: 15, MD: 11, GF: 58, GA: 46 },
+    { team: "Jong AZ", MP: 38, MW: 16, MD: 8, GF: 66, GA: 57 },
+    { team: "Eindhoven", MP: 38, MW: 15, MD: 9, GF: 54, GA: 54 },
+    { team: "Roda", MP: 38, MW: 13, MD: 14, GF: 51, GA: 51 },
+    { team: "Helmond", MP: 38, MW: 11, MD: 5, GF: 42, GA: 44 },
+    { team: "VVV", MP: 38, MW: 11, MD: 10, GF: 46, GA: 62 },
+    { team: "MVV", MP: 38, MW: 11, MD: 9, GF: 44, GA: 54 },
+    { team: "TOP Oss", MP: 38, MW: 12, MD: 6, GF: 54, GA: 69 },
+    { team: "Jong Ajax", MP: 38, MW: 11, MD: 5, GF: 64, GA: 65 },
+    { team: "Jong PSV", MP: 38, MW: 6, MD: 7, GF: 33, GA: 80 },
+    { team: "Jong Utrecht", MP: 38, MW: 4, MD: 10, GF: 36, GA: 82 },
+    { team: "Vitesse", MP: 38, MW: 2, MD: 6, GF: 26, GA: 86 }
+  ];
+
+  const eersteDivisieFixtures = [
+    ["Liverpool", "Bournemouth"],
+    ["Aston Villa", "Newcastle"],
+	["Brighton", "Fulham"],
+	["Sunderland", "West Ham"],
+	["Tottenham", "Burnley"],
+	["Wolves", "Manchester City"],
+	["Chelsea", "Crystal Palace"],
+	["Nottingham", "Brentford"],
+	["Manchester United", "Arsenal"],
+	["Leeds", "Everton"]
+  ];
+
+  teams.forEach(t => {
+    t.ML = t.MP - (t.MW + t.MD);
+    t.GD = t.GF - t.GA;
+    t.points = t.MW * 3 + t.MD;
+    t.power = (t.points / (t.MP * 3)) * 100;
+  });
+
+  teams.sort((a, b) => b.points - a.points);
+
+  if (eersteDivisieTableBody) {
+    teams.forEach((team, i) => {
+      const row = `<tr>
+        <td>${i + 1}</td>
+        <td>${team.team}</td>
+        <td>${team.MP}</td>
+        <td>${team.MW}</td>
+        <td>${team.MD}</td>
+        <td>${team.ML}</td>
+        <td>${team.GF}</td>
+        <td>${team.GA}</td>
+        <td>${team.GD}</td>
+        <td>${team.points}</td>
+      </tr>`;
+      eersteDivisietableBody.innerHTML += row;
+    });
+  }
+
+  if (eersteDivisiePredictionBody) {
+    fixtures.forEach(([home, away]) => {
+      const homeTeam = teams.find(t => t.team === home);
+      const awayTeam = teams.find(t => t.team === away);
+      if (!homeTeam || !awayTeam) return;
+
+      const homePower = homeTeam.power + 10;
+      const awayPower = awayTeam.power;
+      const diff = homePower - awayPower;
+
+      let prediction = "X (Draw)";
+      if (diff >= 10) prediction = "1 (Home Win)";
+      else if (diff >= 5) prediction = "1X (Home Win or Draw)";
+      else if (diff <= -10) prediction = "2 (Away Win)";
+      else if (diff <= -5) prediction = "X2";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${home}</td>
+        <td>${away}</td>
+        <td>${homePower.toFixed(2)}</td>
+        <td>${awayPower.toFixed(2)}</td>
+        <td>${prediction}</td>
+      `;
+      eersteDivisiePredictionBody.appendChild(row);
     });
   }
 
