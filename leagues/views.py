@@ -170,7 +170,21 @@ def Netherlands(request):
      return render(request, 'home/netherland.html', context)
 
 def Belgium(request):
-    return render(request, 'home/belgium.html')   
+    belgian_pro_league= League.objects.get(name="Pro league")
+    belgian_challanger_pro = League.objects.get(name="Challenger Pro")
+    
+
+    belgian_pro_league_teams= Teams.objects.filter(league=belgian_pro_league).order_by('-points')
+    belgian_challanger_pro_teams= Teams.objects.filter(league=belgian_challanger_pro).order_by('-points')
+    
+
+    context = {
+        'belgian_pro_league_teams': belgian_pro_league_teams,
+        'belgian_challanger_pro_teams': belgian_challanger_pro_teams,
+          
+
+     }
+    return render(request, 'home/belgium.html', context) 
 
 
 def Scotland(request):
