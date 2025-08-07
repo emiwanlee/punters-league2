@@ -154,13 +154,16 @@ def France(request):
 
 def Netherlands(request):
      netherlands_eredevesie = League.objects.get(name="Eredevesie")
+     netherlands_eersteedevesie = League.objects.get(name="Eerste Devesie")
     
 
      netherlands_eredevesie_teams= Teams.objects.filter(league=netherlands_eredevesie).order_by('-points')
+     netherlands_eersteedevesie_teams= Teams.objects.filter(league=netherlands_eersteedevesie).order_by('-points')
     
 
      context = {
         'nertherlands_eredevesie_teams': netherlands_eredevesie_teams,
+        'netherlands_eersteedevesie_teams': netherlands_eersteedevesie_teams,
         
         
      }

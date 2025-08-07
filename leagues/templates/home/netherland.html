@@ -36,6 +36,26 @@
 <tbody></tbody>
 
 </table>
+
+<p>This page is for the analysis of the Netherlands  Leagues</p>
+<h2>Netherlands Eredevesie Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="netherlandsEersteeDevesieScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
+
+</table>
  <table>
   <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
   {% for team in nertherlands_eredevesie_teams %}
@@ -43,6 +63,15 @@
   <td>{{ team.goals_difference }}</td></tr>
   {% endfor %}
 </table>
+
+<table>
+  <tr><th>S/no</th><th>Team</th><th>Points</th><th>Power</th><th>Goals Difference</th></tr>
+  {% for team in netherlands_eersteedevesie_teams %}
+  <tr><td>{{ forloop.counter}}</td><td>{{ team.name }}</td><td>{{ team.points }}</td><td>{{ team.power }}</td>
+  <td>{{ team.goals_difference }}</td></tr>
+  {% endfor %}
+</table>
+
 </div>
 </div>
 

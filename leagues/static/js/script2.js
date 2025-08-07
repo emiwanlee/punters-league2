@@ -602,6 +602,47 @@ const leagues =[
   ]
 },
 
+ {
+  name: "Netherlands Eredevesie 2024‑25",
+  tableId: "netherlandsErsteedevesieBTTS",
+  teams: [
+    { team: "Volendam", MP: 38, MW: 26, MD: 4, GF: 87, GA: 48 },
+    { team: "Excelsior", MP: 38, MW: 22, MD: 8, GF: 74, GA: 38 },
+    { team: "Cambuur", MP: 38, MW: 22, MD: 5, GF: 63, GA: 42 },
+    { team: "Den Haag", MP: 38, MW: 20, MD: 10, GF: 69, GA: 47 },
+    { team: "Dordrecht", MP: 38, MW: 20, MD: 6, GF: 68, GA: 47 },
+    { team: "De Grafschap", MP: 38, MW: 19, MD: 8, GF: 69, GA: 46 },
+    { team: "Telstar", MP: 38, MW: 17, MD: 10, GF: 69, GA: 47 },
+    { team: "Emmen", MP: 38, MW: 17, MD: 5, GF: 56, GA: 53 },
+    { team: "Den Bosch", MP: 38, MW: 15, MD: 10, GF: 53, GA: 48 },
+    { team: "Jong AZ", MP: 38, MW: 14, MD: 10, GF: 63, GA: 69 },
+    { team: "Eindhoven", MP: 38, MW: 14, MD: 9, GF: 58, GA: 64 },
+    { team: "Roda", MP: 38, MW: 13, MD: 10, GF: 49, GA: 57 },
+    { team: "Helmond", MP: 38, MW: 12, MD: 10, GF: 53, GA: 61 },
+    { team: "VVV", MP: 38, MW: 11, MD: 8, GF: 44, GA: 69 },
+    { team: "MVV", MP: 38, MW: 10, MD: 10, GF: 52, GA: 59 },
+    { team: "TOP Oss", MP: 38, MW: 8, MD: 14, GF: 31, GA: 61 },
+    { team: "Jong Ajax", MP: 38, MW: 9, MD: 9, GF: 37, GA: 52 },
+    { team: "Jong PSV", MP: 38, MW: 8, MD: 8, GF: 55, GA: 86 },
+    { team: "Jong Utrecht", MP: 38, MW: 4, MD: 11, GF: 31, GA: 82 },
+    { team: "Vitesse", MP: 38, MW: 11, MD: 11, GF: 54, GA: 73 }
+  ],
+
+  matches: [
+    ["Den Bosch", "Jong Ajax"],
+    ["Dordrecht", "Cambuur"],
+	["Eindhoven", "Jong Utrecht"],
+	["TOP Oss", "MVV"],
+	["Almere", "Vitesse"],
+	["Helmond", "Roda"],
+	["Den Haag", "Wilhelm II"],
+	["Jong AZ", "RKC Waalwijk"],
+	["Jong PSV", "Emmen"],
+	["De Grafschap", "VVV"]
+  ]
+
+},
+
 ]
 
 leagues.forEach(league => {
