@@ -170,7 +170,7 @@ def Netherlands(request):
      return render(request, 'home/netherland.html', context)
 
 def Belgium(request):
-    belgian_pro_league= League.objects.get(name="Pro league")
+    belgian_pro_league= League.objects.get(name="Pro League")
     belgian_challanger_pro = League.objects.get(name="Challenger Pro")
     
 

@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const eersteDivisiePredictionBody = document.querySelector("#predictionsTableNetherlands2 tbody");
    const belgianProLeagueTableBody = document.querySelector("#belgianProleagueDeveScoresTable tbody");
   const belgianProLeaguePredictionBody = document.querySelector("#predictionsTableBelgium tbody");
-  const belgianChallangerProLeagueTableBody = document.querySelector("#belgianProleagueDeveScoresTable tbody");
-  const belgianChallengerProLeaguePredictionBody = document.querySelector("#predictionsTableBelgium2 tbody");
+  const belgianChallengerProTableBody = document.querySelector("#belgianChallengerProScoresTable tbody");
+  const belgianChallengerProPredictionBody = document.querySelector("#predictionsTableBelgium2 tbody");
 
   const teams = [
     { team: "Liverpool", MP: 38, MW: 25, MD: 9, GF: 86, GA: 41 },
@@ -1355,33 +1355,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const belgianProLeagueTeams = [
-  { team: "Club Brugge", MP: 34, MW: 22, MD: 7, GF: 78, GA: 36 },
-  { team: "Union SG", MP: 34, MW: 21, MD: 8, GF: 74, GA: 42 },
-  { team: "Genk", MP: 34, MW: 20, MD: 9, GF: 71, GA: 44 },
-  { team: "Antwerp", MP: 34, MW: 19, MD: 10, GF: 67, GA: 40 },
-  { team: "Gent", MP: 34, MW: 18, MD: 9, GF: 65, GA: 50 },
-  { team: "Standard Liège", MP: 34, MW: 17, MD: 10, GF: 59, GA: 47 },
-  { team: "Anderlecht", MP: 34, MW: 15, MD: 12, GF: 62, GA: 54 },
-  { team: "Cercle Brugge", MP: 34, MW: 14, MD: 9, GF: 52, GA: 49 },
-  { team: "Mechelen", MP: 34, MW: 13, MD: 10, GF: 48, GA: 55 },
-  { team: "Westerlo", MP: 34, MW: 12, MD: 11, GF: 53, GA: 60 },
-  { team: "OH Leuven", MP: 34, MW: 11, MD: 10, GF: 45, GA: 57 },
-  { team: "Charleroi", MP: 34, MW: 10, MD: 12, GF: 40, GA: 50 },
-  { team: "Kortrijk", MP: 34, MW: 9, MD: 8, GF: 38, GA: 59 },
-  { team: "Sint-Truiden", MP: 34, MW: 8, MD: 9, GF: 34, GA: 51 },
-  { team: "Eupen", MP: 34, MW: 6, MD: 11, GF: 36, GA: 65 },
-  { team: "Seraing", MP: 34, MW: 4, MD: 6, GF: 29, GA: 73 }
+  { team: "Genk", MP: 30, MW: 21, MD: 5, GF: 55, GA: 33 },
+  { team: "Club Brugge", MP: 30, MW: 17, MD: 8, GF: 65, GA: 36 },
+  { team: "Union Saint Gilloise", MP: 30, MW: 15, MD: 10, GF: 49, GA: 25 },
+  { team: "Anderlecht", MP: 30, MW: 15, MD: 6, GF: 50, GA: 27 },
+  { team: "Antwerp", MP: 30, MW: 12, MD: 10, GF: 47, GA: 32 },
+  { team: "Gent", MP: 30, MW: 11, MD: 12, GF: 41, GA: 33 },
+  { team: "Standard", MP: 30, MW: 10, MD: 9, GF: 22, GA: 35 },
+  { team: "Mechelen", MP: 30, MW: 0, MD: 8, GF: 45, GA: 40 },
+  { team: "Westerlo", MP: 30, MW: 10, MD: 7, GF: 50, GA: 49 },
+  { team: "Charleroi", MP: 30, MW: 10, MD: 7, GF: 36, GA: 36 },
+  { team: "oud Heverlee Leuven", MP: 30, MW: 8, MD: 13, GF: 28, GA: 33 },
+  { team: "Dender", MP: 30, MW: 8, MD: 8, GF: 33, GA: 51 },
+  { team: "Cercle Brugge", MP: 30, MW: 7, MD: 11, GF: 29, GA: 44 },
+  { team: "STVV", MP: 30, MW: 7, MD: 10, GF: 41, GA: 56 },
+  { team: "Kotrijk", MP: 30, MW: 7, MD: 5, GF: 28, GA: 55 },
+  { team: "Beerschot", MP: 30, MW: 3, MD: 9, GF: 26, GA: 60 }
 ];
 
 const belgianProLeagueFixtures = [
-  ["Club Brugge", "OH Leuven"],
-  ["Antwerp", "Eupen"],
-  ["Gent", "Mechelen"],
-  ["Charleroi", "Genk"],
-  ["Westerlo", "Standard Liège"],
+  ["STVV", "Dender"],
+  ["Club Brugge", "Cercle Brugge"],
+  ["Westerlo", "Mechelen"],
+  ["Gent", "Union Saint Gilloise"],
+  ["La Louviere", "Charleroi"],
   ["Union SG", "Cercle Brugge"],
-  ["Sint-Truiden", "Seraing"],
-  ["Kortrijk", "Anderlecht"]
+  ["Anderlecht", "Zulte Waregem"],
+  ["Standard", "Genk"],
+  ["Antwerp", "Oud Herverlee Leuven"]
 ];
 
 
@@ -1447,6 +1448,98 @@ if (belgianProLeaguePredictionBody) {
   });
 }
 
+const belgianChallengerProTeams = [
+  { team: "Zulte Waregem", MP: 28, MW: 18, MD: 5, GF: 55, GA: 30 },
+  { team: "La Louviere", MP: 28, MW: 17, MD: 8, GF: 50, GA: 24 },
+  { team: "Daring Brussels", MP: 34, MW: 17, MD: 6, GF: 42, GA: 21 },
+  { team: "Sk Beveren", MP: 28, MW: 14, MD: 9, GF: 41, GA: 47 },
+  { team: "Patro Eisden", MP: 28, MW: 13, MD: 10, GF: 51, GA: 28 },
+  { team: "Club NXT", MP: 28, MW: 14, MD: 5, GF: 46, GA: 35 },
+ 
+  { team: "Lokeren-Temse", MP: 28, MW: 12, MD: 5, GF: 32, GA: 35 },
+  { team: "Lierse", MP: 28, MW: 11, MD: 7, GF: 40, GA: 35 },
+  { team: "RFc Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
+  { team: "Eupen", MP: 28, MW: 8, MD: 6, GF: 38, GA: 47 },
+  { team: "Lommel", MP: 28, MW: 8, MD: 5, GF: 32, GA: 46 },
+  { team: "Francs Borains", MP: 28, MW: 8, MD: 4, GF: 29, GA: 50 },
+  { team: "RSCA Futures", MP: 28, MW: 5, MD: 8, GF: 41, GA: 54 },
+  { team: "RFC Seraing", MP: 28, MW: 3, MD: 10, GF: 28, GA: 55 },
+  { team: "Jong Genk", MP: 28, MW: 3, MD: 5, GF: 30, GA: 62 }
+];
+
+const belgianChallengerProFixtures = [
+  ["ROC Carleroi", "Jong Gent"],
+  ["Seraing", "Beerschot"],
+  ["RSCA Futures", "Kotrijk"],
+  ["Lierse", "SK Beveren"],
+  ["Daring Brussels", "Lommel"],
+  ["Eupen", "RFC Liege"],
+  ["Patro Eisden", "Lokeren-Temse"],
+  ["Club NXT", "Francs Borains"]
+];
+
+
+
+/*const teams = belgianProLeagueTeams;
+const fixtures = belgianProLeagueFixtures;
+const tableBody = belgianProLeagueTableBody;
+const predictionBody = belgianProLeaguePredictionBody;
+*/
+
+belgianChallengerProTeams.forEach(t => {
+  t.ML = t.MP - (t.MW + t.MD);
+  t.GD = t.GF - t.GA;
+  t.points = t.MW * 3 + t.MD;
+  t.power = (t.points / (t.MP * 3)) * 100;
+});
+
+belgianChallengerProTeams.sort((a, b) => b.points - a.points);
+
+if (belgianChallengerProTableBody) {
+  belgianChallengerProTeams.forEach((team, i) => {
+    const row = `<tr>
+      <td>${i + 1}</td>
+      <td>${team.team}</td>
+      <td>${team.MP}</td>
+      <td>${team.MW}</td>
+      <td>${team.MD}</td>
+      <td>${team.ML}</td>
+      <td>${team.GF}</td>
+      <td>${team.GA}</td>
+      <td>${team.GD}</td>
+      <td>${team.points}</td>
+    </tr>`;
+    belgianChallengerProTableBody.innerHTML += row;
+  });
+}
+
+if (belgianChallengerProPredictionBody) {
+  belgianChallengerProFixtures.forEach(([home, away]) => {
+    const homeTeam = belgianChallengerProTeams.find(t => t.team === home);
+    const awayTeam = belgianChallengerProTeams.find(t => t.team === away);
+    if (!homeTeam || !awayTeam) return;
+
+    const homePower = homeTeam.power + 10;
+    const awayPower = awayTeam.power;
+    const diff = homePower - awayPower;
+
+    let prediction = "X (Draw)";
+    if (diff >= 10) prediction = "1 (Home Win)";
+    else if (diff >= 5) prediction = "1X (Home Win or Draw)";
+    else if (diff <= -10) prediction = "2 (Away Win)";
+    else if (diff <= -5) prediction = "X2";
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${home}</td>
+      <td>${away}</td>
+      <td>${homePower.toFixed(2)}</td>
+      <td>${awayPower.toFixed(2)}</td>
+      <td>${prediction}</td>
+    `;
+    belgianChallengerProPredictionBody.appendChild(row);
+  });
+}
 
 
   });

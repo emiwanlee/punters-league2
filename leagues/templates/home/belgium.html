@@ -1,7 +1,7 @@
 
 {% extends "home/base.html" %}
 {% load static %}
-{% block title %}English Championship{% endblock title %}
+{% block title %}Belgium Leagues{% endblock title %}
 
 
 <div>
@@ -17,9 +17,10 @@
 <img src="{% static 'images/barclayslogo.JPEG' %}" alt ="Premiership logo" height="50px" width="50px">
 {% block content %}
 
-<p>This page is for the analysis of the English  Premier League (EPL)</p>
-<h2>English Premiership Complete table for 2024/25 season</h2>
-<table id="italianSerieAScoresTable">
+<p>This page is for the analysis of the English  Belgian Pto League</p>
+<h2>Belgian pro League Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="belgianProleagueDeveScoresTable">
 <thead class="season-header">
 <th>#</th>
 <th>Teams</th>
@@ -36,7 +37,24 @@
 
 </table>
  <h2>My Chart</h2>
+<h2>Belgian Challanger Pro Complete table for 2024/25 season</h2>
+<div class="table-responsive">
+<table id="belgianChallengerProScoresTable">
+<thead class="season-header">
+<th>#</th>
+<th>Teams</th>
+<th>Matches Played</th>
+<th>Matches Won</th>
+<th>Matches Drawn</th>
+<th>Matches Lost</th>
+<th>Goals For</th>
+<th>Goals Against</th>
+<th>Goals Difference</th>
+<th>Points</th>
+</thead>
+<tbody></tbody>
 
+</table>
 </div>
 <div class="premiership">
 <p>The total goals scored in this team last season was <span id="totalGoals"></span> 
