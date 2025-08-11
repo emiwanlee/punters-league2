@@ -1193,16 +1193,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const netherlandsEredevesieFixtures = [
-  ["Fortuna Sittard", "Go Ahead Eagles"],
-  ["NEC", "Excelsior"],
-  ["Feyenoord", "NAC"],
-	["Heerenveen", "Volendam"],
-	["PSV", "Sparta Rotterdam"],
-	["Zwolle", "Lille"],
+  ["Telstar", "Zwolle"],
+  ["Excelsior", "Feyenoord"],
+  ["Heracles", "NEC"],
+	["Groningen", "Heerenveen"],
+	["Go Ahead Eagles", "Ajax"],
+	["Sparta Rotterdam", "Utrecht"],
 //["Nantes", "Twente"],
-	["AZ Alkmaar", "Groningen"],
-	["Ajax", "Telstar"],
-  ["Utrecht", "Heracles"]
+	["Twente", "PSV"],
+	["Volendam", "AZ Alkmaar"],
+  ["NAC", "Fortuna Sittard"]
 	
 	
   ];
