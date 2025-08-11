@@ -198,12 +198,18 @@ const leagues =[
 	{ team: "Cardiff", MP: 46, MW: 9, MD: 17, GF: 48, GA: 73 },
         ],
         matches:[
-            ["Birmingham", "Ipswich"],
-   ["Southampton", "Wrexham"],
-    ["Coventry", "Hull"],
-	//["Charlton", "Watford"],
-	["West Brom", "Blackburn"],
-	["Norwich", "Millwall"]
+            ["Wrexham", "West Brom"],
+   ["Derby County", "Coventry"],
+    ["Portsmouth", "Norwich"],
+	["Preston", "Leicester"],
+	["Swansea", "Sheffield United"],
+	["Watford", "QPR"],
+  ["Blackburn", "Birmingham"],
+  ["Sheffield Wednesday", "Stoke"],
+  ["Millwall", "Middlesbrough"],
+  ["Bristol City", "Charlton"],
+  ["Ipswich", "Southampton"],
+  ["Hull", "Oxford"]
         ]
     },
 
@@ -237,18 +243,18 @@ const leagues =[
 	{ team: "Shrewsbury", MP: 46, MW: 8, MD: 9, GF: 41, GA: 79 },
         ],
         matches:[
-           ["Port Vale", "Cardiff"],
-   ["Reading", "Huddersfield"],
-    ["Peterborough", "Luton"],
-	["Wycombe", "Stockport"],
-	["Exeter", "Blackpool"],
+          ["Burton", "Port Vale"],
+   ["Exeter", "Mansfield"],
+    ["Leyton Orient", "Stockport"],
+	["Doncaster", "Wycombe"],
+	["Stevenage", "Northampton"],
 	["Barnsley", "Burton"],
-	["Stevenage", "Rotherham"],
-	["Wimbledon", "Lincoln"],
-	["Bolton", "Plymouth"],
-	["Northampton", "Bradford"],
-	["Leyton Orient", "Wigan"],
-	["Mansfield", "Doncaster"]
+	["Wigan", "Peterborough"],
+	["Lincoln", "Plymouth"],
+	["Reading", "Wimbledon"],
+	["Bradford", "Luton"],
+	["Cardiff", "Rotherham"],
+	["Blackpool", "Huddersfield"]
         ]
     },
 
@@ -282,18 +288,18 @@ const leagues =[
 	{ team: "Morecambe", MP: 46, MW: 10, MD: 6, GF: 40, GA: 72 },
         ],
         matches:[
-          ["Tranmere", "Shrewsbury"],
-   ["Notts County", "Salford"],
-    ["Crawley", "Newport"],
-	["Oldham", "Colchester"],
-	["Harrogate", "Grimsby"],
-	["Bromley", "Barnet"],
-	["Gillingham", "Walsall"],
-	["Crewe Alexandra", "Accrington Stanley"],
-	["Swindon", "Cambridge"],
-	["Barrow", "MK Dons"],
-	//["Fleetwood", "Bristol Rovers"],
-	["Cheltenham", "Chesterfield"]
+         ["Chesterfield", "Bristol Rovers"],
+   ["Oldham", "Swindon"],
+    ["Barnet", "Walsall"],
+	["Shrewsbury", "Colchester"],
+	["Cambridge", "Harrogate"],
+	["Bromley", "Fleetwood"],
+	["Tranmere", "Gillingham"],
+	["Barrow", "Notts County"],
+	["MK Dons", "Cheltenham"],
+	["Crewe Alexandra", "Crawley Town"],
+	["Salford", "Accrington Stanley"],
+  ["Grimsby", "Newport"]
         ]
     },
     
@@ -589,16 +595,16 @@ const leagues =[
 	{ team: "Almere", MP: 34, MW: 4, MD: 10, GF: 23, GA: 79 },
   ],
   matches: [
-     ["Fortuna Sittard", "Go Ahead Eagles"],
-    ["NEC", "Excelsior"],
-    ["Feyenoord", "NAC"],
-	["Heerenveen", "Volendam"],
-	["PSV", "Sparta Rotterdam"],
-	["Zwolle", "Lille"],
-	["Nantes", "Twente"],
-	["AZ Alkmaar", "Groningen"],
-	["Ajax", "Telstar"],
-  ["Utrecht", "Heracles"]
+     ["Telstar", "Zwolle"],
+  ["Excelsior", "Feyenoord"],
+  ["Heracles", "NEC"],
+	["Groningen", "Heerenveen"],
+	["Go Ahead Eagles", "Ajax"],
+	["Sparta Rotterdam", "Utrecht"],
+//["Nantes", "Twente"],
+	["Twente", "PSV"],
+	["Volendam", "AZ Alkmaar"],
+  ["NAC", "Fortuna Sittard"]
   ]
 },
 
@@ -629,16 +635,15 @@ const leagues =[
   ],
 
   matches: [
-    ["Den Bosch", "Jong Ajax"],
-    ["Dordrecht", "Cambuur"],
-	["Eindhoven", "Jong Utrecht"],
-	["TOP Oss", "MVV"],
-	["Almere", "Vitesse"],
-	["Helmond", "Roda"],
-	["Den Haag", "Wilhelm II"],
-	["Jong AZ", "RKC Waalwijk"],
-	["Jong PSV", "Emmen"],
-	["De Grafschap", "VVV"]
+    ["VVV", "Jong PSV"],
+    ["Roda", "De Graafschap"],
+	["Cambuur", "TOP Oss"],
+	["RKC Waalwijk", "Helmond"],
+	["MVV", "Dordercht"],
+	["Emmen", "Almere"],
+	["Wilhelm II", "Eindhoven"],
+	["Jong Utrecht", "Den Haag"],
+	["Jong Ajax", "Jong AZ"],
   ]
 
 },

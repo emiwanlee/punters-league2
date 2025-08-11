@@ -243,12 +243,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishChampionshipFixtures = [
-   ["Birmingham", "Ipswich"],
-   ["Southampton", "Wrexham"],
-    ["Coventry", "Hull"],
-	//["Charlton", "Watford"],
-	["West Brom", "Blackburn"],
-	["Norwich", "Millwall"]
+   ["Wrexham", "West Brom"],
+   ["Derby County", "Coventry"],
+    ["Portsmouth", "Norwich"],
+	["Preston", "Leicester"],
+	["Swansea", "Sheffield United"],
+	["Watford", "QPR"],
+  ["Blackburn", "Birmingham"],
+  ["Sheffield Wednesday", "Stoke"],
+  ["Millwall", "Middlesbrough"],
+  ["Bristol City", "Charlton"],
+  ["Ipswich", "Southampton"],
+  ["Hull", "Oxford"]
   ];
 
   englishChampionshipTeams.forEach(t => {
@@ -340,18 +346,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Port Vale", "Cardiff"],
-   ["Reading", "Huddersfield"],
-    ["Peterborough", "luton"],
-	["Wycombe", "Stockport"],
-	["Exeter", "Blackpool"],
+   ["Burton", "Port Vale"],
+   ["Exeter", "Mansfield"],
+    ["Leyton Orient", "Stockport"],
+	["Doncaster", "Wycombe"],
+	["Stevenage", "Northampton"],
 	["Barnsley", "Burton"],
-	["Stevenage", "Rotherham"],
-	["Wimbledon", "Lincoln"],
-	["Bolton", "Plymouth"],
-	["Northampton", "Bradford"],
-	["Leyton Orient", "Wigan"],
-	["Mansfield", "Doncaster"]
+	["Wigan", "Peterborough"],
+	["Lincoln", "Plymouth"],
+	["Reading", "Wimbledon"],
+	["Bradford", "Luton"],
+	["Cardiff", "Rotherham"],
+	["Blackpool", "Huddersfield"]
   ];
 
   englishLeagueOneTeams.forEach(t => {
@@ -443,18 +449,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueTwoFixtures = [
-   ["Tranmere", "Shrewsbury"],
-   ["Notts County", "Salford"],
-    ["Crawley", "Newport"],
-	["Oldham", "Colchester"],
-	["Harrogate", "Grimsby"],
-	["Bromley", "Barnet"],
-	["Gillingham", "Walsall"],
-	["Crewe", "Accrington Stanley"],
-	["Swindon", "Cambridge"],
-	["Barrow", "MK Dons"],
-	["Fleetwood", "Bristol Rovers"],
-  ["Cheltenham", "Chesterfield"]
+   ["Chesterfield", "Bristol Rovers"],
+   ["Oldham", "Swindon"],
+    ["Barnet", "Walsall"],
+	["Shrewsbury", "Colchester"],
+	["Cambridge", "Harrogate"],
+	["Bromley", "Fleetwood"],
+	["Tranmere", "Gillingham"],
+	["Barrow", "Notts County"],
+	["MK Dons", "Cheltenham"],
+	["Crewe Alexandra", "Crawley Town"],
+	["Salford", "Accrington Stanley"],
+  ["Grimsby", "Newport"]
   ];
 
   englishLeagueTwoTeams.forEach(t => {
@@ -1268,7 +1274,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { team: "Cambuur", MP: 38, MW: 22, MD: 5, GF: 63, GA: 42 },
     { team: "Den Haag", MP: 38, MW: 20, MD: 10, GF: 69, GA: 47 },
     { team: "Dordrecht", MP: 38, MW: 20, MD: 6, GF: 68, GA: 47 },
-    { team: "De Grafschap", MP: 38, MW: 19, MD: 8, GF: 69, GA: 46 },
+    { team: "De Graafschap", MP: 38, MW: 19, MD: 8, GF: 69, GA: 46 },
     { team: "Telstar", MP: 38, MW: 17, MD: 10, GF: 69, GA: 47 },
     { team: "Emmen", MP: 38, MW: 17, MD: 5, GF: 56, GA: 53 },
     { team: "Den Bosch", MP: 38, MW: 15, MD: 10, GF: 53, GA: 48 },
@@ -1286,16 +1292,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const eersteDivisieFixtures = [
-    ["Den Bosch", "Jong Ajax"],
-    ["Dordrecht", "Cambuur"],
-	["Eindhoven", "Jong Utrecht"],
-	["TOP Oss", "MVV"],
-	["Almere", "Vitesse"],
-	["Helmond", "Roda"],
-	["Den Haag", "Wilhelm II"],
-	["Jong AZ", "RKC Waalwijk"],
-	["Jong PSV", "Emmen"],
-	["De Grafschap", "VVV"]
+    ["VVV", "Jong PSV"],
+    ["Roda", "De Graafschap"],
+	["Cambuur", "TOP Oss"],
+	["RKC Waalwijk", "Helmond"],
+	["MVV", "Dordercht"],
+	["Emmen", "Almere"],
+	["Wilhelm II", "Eindhoven"],
+	["Jong Utrecht", "Den Haag"],
+	["Jong Ajax", "Jong AZ"],
+//	["De Grafschap", "VVV"]
   ];
 
   eersteDivisieTeams.forEach(t => {
