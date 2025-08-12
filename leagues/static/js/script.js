@@ -1368,7 +1368,7 @@ document.addEventListener("DOMContentLoaded", function () {
   { team: "Antwerp", MP: 30, MW: 12, MD: 10, GF: 47, GA: 32 },
   { team: "Gent", MP: 30, MW: 11, MD: 12, GF: 41, GA: 33 },
   { team: "Standard", MP: 30, MW: 10, MD: 9, GF: 22, GA: 35 },
-  { team: "Mechelen", MP: 30, MW: 0, MD: 8, GF: 45, GA: 40 },
+  { team: "Mechelen", MP: 30, MW: 10, MD: 8, GF: 45, GA: 40 },
   { team: "Westerlo", MP: 30, MW: 10, MD: 7, GF: 50, GA: 49 },
   { team: "Charleroi", MP: 30, MW: 10, MD: 7, GF: 36, GA: 36 },
   { team: "Oud Heverlee Leuven", MP: 30, MW: 8, MD: 13, GF: 28, GA: 33 },
