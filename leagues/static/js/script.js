@@ -921,15 +921,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueTwoFixtures = [
-    ["Guingamp", "Le Mans"],
-    ["Pau", "Annecy"],
-    ["Dunkerque", "Clermont Foot"],
-	["Laval", "St. Etienne"],
-	["Ajaccio", "Bastia"],
-	["Rodez", "Nancy"],
-	["Troyes", "Grenoble"],
-	["Montpellier", "Red Star"],
-	["Amiens", "Reims"]
+    ["Red Star", "Amiens"],
+    ["Clermont Foot", "Troyes"],
+    ["Bastia", "Pau"],
+	["Nancy", "Boulogne"],
+	["Grenoble", "Laval"],
+	["Reims", "Guingamp"],
+	["Annecy", "Donkerque"],
+	["St. Etienne", "Rodez"],
+	["Le Mans", "Montpellier"]
 	
 	
   ];
