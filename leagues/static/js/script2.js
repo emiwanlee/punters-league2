@@ -609,7 +609,7 @@ const leagues =[
 },
 
  {
-  name: "Netherlands Eredevesie 2024‑25",
+  name: "Netherlands Ersteed1visie 2024‑25",
   tableId: "netherlandsErsteedevesieBTTS",
   teams: [
     { team: "Volendam", MP: 38, MW: 26, MD: 4, GF: 87, GA: 48 },
@@ -635,7 +635,7 @@ const leagues =[
   ],
 
   matches: [
-    ["VVV", "Jong PSV"],
+   ["VVV", "Jong PSV"],
     ["Roda", "De Graafschap"],
 	["Cambuur", "TOP Oss"],
 	["RKC Waalwijk", "Helmond"],
@@ -644,8 +644,8 @@ const leagues =[
 	["Wilhelm II", "Eindhoven"],
 	["Jong Utrecht", "Den Haag"],
 	["Jong Ajax", "Jong AZ"],
+//	["De Grafschap", "VVV"]
   ]
-
 },
 
 ]

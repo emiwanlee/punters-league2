@@ -1106,15 +1106,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesliga2Fixtures = [
-    ["Preußen Münster", "Padeborn"],
-    ["Nurnberg", "Darmstadt"],
-    ["Braunschweig", "Greuther Furth"],
-	["Dusseldorf", "Hannover"],
-	["Dynamo", "Magdeburg"],
-	["Kaiserslautern", "Schalke"],
-	["Holstein Kiel", "Arminia"],
-	["Bochum", "Elvesberg"],
-	["Hertha", "Karlsruher"]
+    ["Elvesberg", "Kaiserslautern"],
+    ["Preußen Münster", "Nurnberg"],
+    ["Padeborn", "Dusseldorf"],
+	["Hannover", "Magdeburg"],
+	["Karlsruher", "Braunschweig"],
+	["Schalke", "Bochum"],
+	["Greuther Furth", "Holstein Kiel"],
+	["Darmstadt", "Hertha"],
+	["Arminia", "Dynamo"]
         
 	
 	
@@ -1371,7 +1371,7 @@ document.addEventListener("DOMContentLoaded", function () {
   { team: "Mechelen", MP: 30, MW: 0, MD: 8, GF: 45, GA: 40 },
   { team: "Westerlo", MP: 30, MW: 10, MD: 7, GF: 50, GA: 49 },
   { team: "Charleroi", MP: 30, MW: 10, MD: 7, GF: 36, GA: 36 },
-  { team: "oud Heverlee Leuven", MP: 30, MW: 8, MD: 13, GF: 28, GA: 33 },
+  { team: "Oud Heverlee Leuven", MP: 30, MW: 8, MD: 13, GF: 28, GA: 33 },
   { team: "Dender", MP: 30, MW: 8, MD: 8, GF: 33, GA: 51 },
   { team: "Cercle Brugge", MP: 30, MW: 7, MD: 11, GF: 29, GA: 44 },
   { team: "STVV", MP: 30, MW: 7, MD: 10, GF: 41, GA: 56 },
@@ -1380,15 +1380,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ];
 
 const belgianProLeagueFixtures = [
-  ["STVV", "Dender"],
-  ["Club Brugge", "Cercle Brugge"],
-  ["Westerlo", "Mechelen"],
-  ["Gent", "Union Saint Gilloise"],
-  ["La Louviere", "Charleroi"],
-  ["Union SG", "Cercle Brugge"],
-  ["Anderlecht", "Zulte Waregem"],
-  ["Standard", "Genk"],
-  ["Antwerp", "Oud Herverlee Leuven"]
+  ["Oud Heverlee Leuven", "Genk"],
+  ["Zulte Waregem", "Club Brugge"],
+  ["Mechelen", "Gent"],
+   ["Union Saint Gilloise", "Standard"],
+  ["Dender", "Anderlecht"],
+  ["STVV", "La Louviere"],
+  ["Charleroi", "AntwerpCercle Brugge"],
+  ["Cercle Brugge", "Westerlo"]
 ];
 
 
@@ -1474,14 +1473,15 @@ const belgianChallengerProTeams = [
 ];
 
 const belgianChallengerProFixtures = [
-  ["ROC Carleroi", "Jong Gent"],
-  ["Seraing", "Beerschot"],
-  ["RSCA Futures", "Kotrijk"],
+  ["Francs Borains", "Patro Eisden"],
+  ["Sk Beveren", "Jong Genk"],
+  ["Kotrijk", "Lierse"],
   ["Lierse", "SK Beveren"],
-  ["Daring Brussels", "Lommel"],
-  ["Eupen", "RFC Liege"],
-  ["Patro Eisden", "Lokeren-Temse"],
-  ["Club NXT", "Francs Borains"]
+  ["Lommel", "ROC Charleroi"],
+  ["Lokeren-Temse", "Daring Brussels"],
+  ["Beerschot", "Eupen"],
+  ["Jong Gent", "RSCA Futures"],
+  ["RFc Liege", "RFC Seraing"]
 ];
 
 
