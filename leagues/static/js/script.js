@@ -1386,7 +1386,7 @@ const belgianProLeagueFixtures = [
    ["Union Saint Gilloise", "Standard"],
   ["Dender", "Anderlecht"],
   ["STVV", "La Louviere"],
-  ["Charleroi", "AntwerpCercle Brugge"],
+  ["Charleroi", "Antwerp"],
   ["Cercle Brugge", "Westerlo"]
 ];
 
