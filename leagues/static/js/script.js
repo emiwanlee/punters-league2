@@ -346,18 +346,19 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Burton", "Port Vale"],
-   ["Exeter", "Mansfield"],
-    ["Leyton Orient", "Stockport"],
-	["Doncaster", "Wycombe"],
-	["Stevenage", "Northampton"],
-	["Barnsley", "Burton"],
-	["Wigan", "Peterborough"],
-	["Lincoln", "Plymouth"],
-	["Reading", "Wimbledon"],
-	["Bradford", "Luton"],
-	["Cardiff", "Rotherham"],
-	["Blackpool", "Huddersfield"]
+   ["Bolton", "Reading"],
+   ["Wimbledon", "Cardiff"],
+    ["Huddersfield", "Doncaster"],
+	["Luton", "Wigan"],
+	["Mansfield", "Blackpool"],
+	["Northampton", "Lincoln"],
+	["Peterborough", "Barnsley"],
+	["Plymouth", "Leyton Orient"],
+	["Port Vale", "Stevenage"],
+	["Stockport", "Bradford"],
+	["Wycombe", "Exeter"],
+	//["Blackpool", "Huddersfield"],
+ // ["Bolton", "Reading"]
   ];
 
   englishLeagueOneTeams.forEach(t => {
@@ -449,18 +450,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueTwoFixtures = [
-   ["Chesterfield", "Bristol Rovers"],
-   ["Oldham", "Swindon"],
-    ["Barnet", "Walsall"],
-	["Shrewsbury", "Colchester"],
-	["Cambridge", "Harrogate"],
-	["Bromley", "Fleetwood"],
-	["Tranmere", "Gillingham"],
-	["Barrow", "Notts County"],
-	["MK Dons", "Cheltenham"],
-	["Crewe Alexandra", "Crawley Town"],
-	["Salford", "Accrington Stanley"],
-  ["Grimsby", "Newport"]
+   ["Newport", "Salford"],
+   ["Bristol Rovers", "Oldham"],
+    ["Cheltenham", "Bromley"],
+	["Colchester", "Cambridge"],
+	["Crawley", "MK Dons"],
+	["Fleetwood", "Crewe"],
+	["Gillingham", "Chesterfield"],
+	["Harrogate", "Barrow"],
+	["Swindon", "Barnet"],
+	["Walsall", "Grimsby"],
+	//["Salford", "Accrington Stanley"],
+//  ["Grimsby", "Newport"]
   ];
 
   englishLeagueTwoTeams.forEach(t => {
