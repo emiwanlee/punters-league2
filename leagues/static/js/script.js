@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["Liverpool", "Bournemouth"],
+    ["West Ham", "Chelsea"],
     ["Aston Villa", "Newcastle"],
 	["Brighton", "Fulham"],
 	["Sunderland", "West Ham"],
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Girona", "Rayo Vallecano"],
+    ["Real Betis", "Alaves"],
     ["Villarreal", "Oviedo"],
     ["Mallorca", "Barcelona"],
 	["Valencia", "Real Sociedad"],
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishChampionshipFixtures = [
-   ["Wrexham", "West Brom"],
+   ["Derby County", "Bristol City"],
    ["Derby County", "Coventry"],
     ["Portsmouth", "Norwich"],
 	["Preston", "Leicester"],
@@ -460,7 +460,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	["Harrogate", "Barrow"],
 	["Swindon", "Barnet"],
 	["Walsall", "Grimsby"],
-	//["Salford", "Accrington Stanley"],
+	["Notts County", "Shrewsbury"],
 //  ["Grimsby", "Newport"]
   ];
 
@@ -830,7 +830,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueOneFixtures = [
-    ["Auxerre", "Lorient"],
+    ["PSG", "Angers"],
     ["Rennes", "Marseille"],
     ["Angers", "Paris FC"],
 	["Nice", "Toulouse"],
@@ -922,12 +922,12 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueTwoFixtures = [
-    ["Red Star", "Amiens"],
-    ["Clermont Foot", "Troyes"],
-    ["Bastia", "Pau"],
-	["Nancy", "Boulogne"],
-	["Grenoble", "Laval"],
-	["Reims", "Guingamp"],
+    ["Amiens", "Annecy"],
+    ["Clermont Foot", "Grenoble"],
+    ["Dunkerque", "Nancy"],
+	["Le Mans", "Bastia"],
+	["Rodez", "Laval"],
+//	["Reims", "Guingamp"],
 	["Annecy", "Donkerque"],
 	["St. Etienne", "Rodez"],
 	["Le Mans", "Montpellier"]
@@ -1293,11 +1293,11 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const eersteDivisieFixtures = [
-    ["VVV", "Jong PSV"],
-    ["Roda", "De Graafschap"],
-	["Cambuur", "TOP Oss"],
+    ["Almere", "Wilhelm II"],
+    ["De Graafschp", "MVV"],
+	["Eindhoven", "Waalwijk"],
 	["RKC Waalwijk", "Helmond"],
-	["MVV", "Dordercht"],
+	["Helmond", "Emmen"],
 	["Emmen", "Almere"],
 	["Wilhelm II", "Eindhoven"],
 	["Jong Utrecht", "Den Haag"],
