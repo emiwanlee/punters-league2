@@ -550,16 +550,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laliga2Fixtures = [
-    ["Cadiz", "Mirandes"],
-    ["Racing", "Castellon"],
-    ["Granada", "Deportivo"],
-	["Real Sociedad B", "Zaragoza"],
-	["Valladolid", "Ceuta"],
-	["Gijon", "Cordoba"],
-	["Malaga", "Eibar"],
-	["Burgos", "Cultural Leonesa"],
-	["Huesca", "Leganes"],
-	["Las Palmas", "Andorra"]
+    ["Eibar", "Granada"],
+    ["Castellon", "Valladolid"],
+    ["Leganes", "Cadiz"],
+	["Mirandes", "Huesca"],
+	["Ceuta", "Gijon"],
+	["Zaragoza", "Andorra"],
+	["Deportivo", "Burgos"],
+	["Cultural Leonesa", "Almeria"],
+	["Malaga", "Real Sociedad B"],
+	["Albacete", "Racing"],
+  ["Cordoba", "Las Palmas"]
   ];
 
   laliga2Teams.forEach(t => {
@@ -833,12 +834,13 @@ document.addEventListener("DOMContentLoaded", function () {
     ["PSG", "Angers"],
     ["Rennes", "Marseille"],
     ["Angers", "Paris FC"],
-	["Nice", "Toulouse"],
-	["Monaco", "Le Havre"],
-	["Brest", "Lille"],
-	["Nantes", "PSG"],
-	["Lens", "Lyon"],
-	["Metz", "Strasbourg"]
+	["Nice", "Auxerre"],
+	["Lyon", "Metz"],
+	["Lorient", "Rennes"],
+	["Le Havre", "Lens"],
+	["Strasbourg", "Nantes"],
+	["Toulouse", "Brest"],
+  ["Lille", "Monaco"]
 	
 	
   ];
@@ -922,15 +924,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueTwoFixtures = [
+    ["Ajaccio", "St. Etienne"],
     ["Amiens", "Annecy"],
     ["Clermont Foot", "Grenoble"],
-    ["Dunkerque", "Nancy"],
+	["Dunkerque", "Nancy"],
+	["Guingamp", "Red Star"],
 	["Le Mans", "Bastia"],
+	["Pau", "Reims"],
 	["Rodez", "Laval"],
-//	["Reims", "Guingamp"],
-	["Annecy", "Donkerque"],
-	["St. Etienne", "Rodez"],
-	["Le Mans", "Montpellier"]
+	["Troyes", "Montpellier"]
 	
 	
   ];
@@ -1200,16 +1202,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const netherlandsEredevesieFixtures = [
-  ["Telstar", "Zwolle"],
-  ["Excelsior", "Feyenoord"],
-  ["Heracles", "NEC"],
-	["Groningen", "Heerenveen"],
-	["Go Ahead Eagles", "Ajax"],
-	["Sparta Rotterdam", "Utrecht"],
+  ["Go Ahead Eagles", "Sparta Rotterdam"],
+  ["PSV", "Groningen"],
+  ["Telstar", "Volendam"],
+	["Heerenven", "Twente"],
+	["Utrecht", "Excelsior"],
+	["NEC", "NAC"],
 //["Nantes", "Twente"],
-	["Twente", "PSV"],
-	["Volendam", "AZ Alkmaar"],
-  ["NAC", "Fortuna Sittard"]
+	["Ajax", "Heracles"],
+//	["Volendam", "AZ Alkmaar"],
+//  ["NAC", "Fortuna Sittard"]
 	
 	
   ];
@@ -1293,16 +1295,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const eersteDivisieFixtures = [
+    ["Den Haag", "Vitesse"],
     ["Almere", "Wilhelm II"],
-    ["De Graafschp", "MVV"],
-	["Eindhoven", "Waalwijk"],
-	["RKC Waalwijk", "Helmond"],
+	["De Graafschap", "MVV"],
+	["Eindhoven", "RKC Waalwijk"],
 	["Helmond", "Emmen"],
-	["Emmen", "Almere"],
-	["Wilhelm II", "Eindhoven"],
-	["Jong Utrecht", "Den Haag"],
-	["Jong Ajax", "Jong AZ"],
-//	["De Grafschap", "VVV"]
+	["Dordrecht", "Jong PSV"],
+	["VVV", "Roda"],
+	["Den Bosch", "TOP Oss"],
+	["Jong AZ", "Cambuur"],
+	["Jong Utrecht", "Jong Ajaz"]
   ];
 
   eersteDivisieTeams.forEach(t => {
@@ -1381,14 +1383,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ];
 
 const belgianProLeagueFixtures = [
-  ["Oud Heverlee Leuven", "Genk"],
-  ["Zulte Waregem", "Club Brugge"],
-  ["Mechelen", "Gent"],
-   ["Union Saint Gilloise", "Standard"],
-  ["Dender", "Anderlecht"],
-  ["STVV", "La Louviere"],
-  ["Charleroi", "Antwerp"],
-  ["Cercle Brugge", "Westerlo"]
+  ["Club Brugge", "Westerlo"],
+  ["Standard", "Cercle Brugge"],
+  ["Zulte Waregem", "Truiden"],
+   ["Genk", "Charleroi"],
+  ["Antwerp", "Mechelen"],
+  ["Anderlecht", "Gent"],
+  ["La Louviere", "Union Saint Gilloise"],
+  ["Dender", "Oud Herverlee Leuven"]
 ];
 
 
@@ -1461,10 +1463,9 @@ const belgianChallengerProTeams = [
   { team: "Sk Beveren", MP: 28, MW: 14, MD: 9, GF: 41, GA: 47 },
   { team: "Patro Eisden", MP: 28, MW: 13, MD: 10, GF: 51, GA: 28 },
   { team: "Club NXT", MP: 28, MW: 14, MD: 5, GF: 46, GA: 35 },
- 
   { team: "Lokeren-Temse", MP: 28, MW: 12, MD: 5, GF: 32, GA: 35 },
-  { team: "Lierse", MP: 28, MW: 11, MD: 7, GF: 40, GA: 35 },
-  { team: "RFc Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
+  { team: "Lierse K", MP: 28, MW: 11, MD: 7, GF: 40, GA: 35 },
+  { team: "RFC Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
   { team: "Eupen", MP: 28, MW: 8, MD: 6, GF: 38, GA: 47 },
   { team: "Lommel", MP: 28, MW: 8, MD: 5, GF: 32, GA: 46 },
   { team: "Francs Borains", MP: 28, MW: 8, MD: 4, GF: 29, GA: 50 },
@@ -1474,15 +1475,15 @@ const belgianChallengerProTeams = [
 ];
 
 const belgianChallengerProFixtures = [
-  ["Francs Borains", "Patro Eisden"],
-  ["Sk Beveren", "Jong Genk"],
-  ["Kotrijk", "Lierse"],
-  ["Lierse", "SK Beveren"],
-  ["Lommel", "ROC Charleroi"],
-  ["Lokeren-Temse", "Daring Brussels"],
-  ["Beerschot", "Eupen"],
-  ["Jong Gent", "RSCA Futures"],
-  ["RFc Liege", "RFC Seraing"]
+  ["Jong Gent", "Beerschot"],
+  ["Patro Eisden", "Club NXT"],
+  ["Daring Brussels", "Sk Beveren"],
+  ["Francs Borains", "Lommel"],
+  ["Jong Genk", "RFC Seraing"],
+  ["Lierse K", "Eupen"],
+  ["Charleroi", "Kotrijk"],
+  ["Lokeren", "RFC Liege"],
+  //["RFc Liege", "RFC Seraing"]
 ];
 
 
