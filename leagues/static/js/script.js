@@ -57,15 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const fixtures = [
     ["West Ham", "Chelsea"],
-    ["Aston Villa", "Newcastle"],
-	["Brighton", "Fulham"],
-	["Sunderland", "West Ham"],
-	["Tottenham", "Burnley"],
-	["Wolves", "Manchester City"],
-	["Chelsea", "Crystal Palace"],
-	["Nottingham", "Brentford"],
-	["Manchester United", "Arsenal"],
-	["Leeds", "Everton"]
+    ["Manchester City", "Tottenham"],
+	["Bournemouth", "Wolves"],
+	["Burnley", "Sunderland"],
+	["Brentford", "Aston Villa"],
+	["Arsenal", "Leeds"],
+	["Crystal Palace", "Nottingham"],
+	["Everton", "Brighton"],
+	["Fulham", "Manchester United"],
+	["Newcastle", "Liverpool"]
   ];
 
   teams.forEach(t => {
@@ -148,14 +148,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const laligaFixtures = [
     ["Real Betis", "Alaves"],
-    ["Villarreal", "Oviedo"],
-    ["Mallorca", "Barcelona"],
-	["Valencia", "Real Sociedad"],
-	["Celta Vigo", "Getafe"],
-	["Athletico Club", "Sevilla"],
-	["Espanyol", "Atletico Madrid"],
-	["Elche", "Real Betis"],
-	["Real Madrid", "Osasuna"]
+    ["Mallorca", "Celta Vigo"],
+    ["Atletico Madrid", "Elche"],
+	["Levante", "Barcelona"],
+	["Osasuna", "Valencia"],
+	["Real Sociedad", "Espanyol"],
+	["Villarreal", "Girona"],
+	["Oviedo", "Real Madrid"],
+	["Athletic Club", "Rayo Vallecano"]
   ];
 
   laligaTeams.forEach(t => {
@@ -244,17 +244,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const englishChampionshipFixtures = [
    ["Derby County", "Bristol City"],
-   ["Derby County", "Coventry"],
-    ["Portsmouth", "Norwich"],
-	["Preston", "Leicester"],
-	["Swansea", "Sheffield United"],
-	["Watford", "QPR"],
-  ["Blackburn", "Birmingham"],
-  ["Sheffield Wednesday", "Stoke"],
-  ["Millwall", "Middlesbrough"],
-  ["Bristol City", "Charlton"],
-  ["Ipswich", "Southampton"],
-  ["Hull", "Oxford"]
+   ["Hull", "Blackburn"],
+    ["Swansea", "Watford"],
+	["Charlton", "Leicester"],
+	["Preston", "Ipswich"],
+	["Wrexham", "Sheffield Wednesday"],
+  ["Southampton", "Stoke"],
+  ["Norwich", "Middlesbrough"],
+  ["West Brom", "Portsmouth"],
+  ["Sheffield United", "Millwall"],
+  ["Coventry", "QPR"],
+  ["Birmingham", "Oxford"]
   ];
 
   englishChampionshipTeams.forEach(t => {
