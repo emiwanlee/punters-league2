@@ -116,16 +116,16 @@ const leagues =[
     { team: "Southampton", MP: 38, MW: 2, MD: 6, GF: 26, GA: 86 },
         ],
         matches: [
-            ["Liverpool", "Bournemouth"],
-    ["Aston Villa", "Newcastle"],
-	["Brighton", "Fulham"],
-	["Sunderland", "West Ham"],
-	["Tottenham", "Burnley"],
-	["Wolves", "Manchester City"],
-	["Chelsea", "Crystal Palace"],
-	["Nottingham", "Brentford"],
-	["Manchester United", "Arsenal"],
-	["Leeds", "Everton"]
+           ["West Ham", "Chelsea"],
+    ["Manchester City", "Tottenham"],
+	["Bournemouth", "Wolves"],
+	["Burnley", "Sunderland"],
+	["Brentford", "Aston Villa"],
+	["Arsenal", "Leeds"],
+	["Crystal Palace", "Nottingham"],
+	["Everton", "Brighton"],
+	["Fulham", "Manchester United"],
+	["Newcastle", "Liverpool"]
   ]
         
     },
@@ -156,15 +156,15 @@ const leagues =[
 	{ team: "Valladolid", MP: 38, MW: 4, MD: 4, GF: 26, GA: 90 },
         ],
         matches:[
-            ["Girona", "Rayo Vallecano"],
-    ["Villarreal", "Oviedo"],
-    ["Mallorca", "Barcelona"],
-	["Valencia", "Real Sociedad"],
-	["Celta Vigo", "Getafe"],
-	["Athletico Club", "Sevilla"],
-	["Espanyol", "Atletico Madrid"],
-	["Elche", "Real Betis"],
-	["Real Madrid", "Osasuna"]
+            ["Real Betis", "Alaves"],
+    ["Mallorca", "Celta Vigo"],
+    ["Atletico Madrid", "Elche"],
+	["Levante", "Barcelona"],
+	["Osasuna", "Valencia"],
+	["Real Sociedad", "Espanyol"],
+	["Villarreal", "Girona"],
+	["Oviedo", "Real Madrid"],
+	["Athletic Club", "Rayo Vallecano"]
         ]
     },
 
