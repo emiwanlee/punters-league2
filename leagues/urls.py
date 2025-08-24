@@ -3,7 +3,7 @@ from . import views
 from django.views.generic import TemplateView
 from django.contrib.sitemaps import Sitemap
 from django.contrib.sitemaps.views import sitemap  # ✅ Note: use .views not .as_views
-from .sitemaps import LeagueSitemap  # best to separate into a sitemaps.py file
+from .sitemaps import LeagueSitemap, StaticViewSitemap  # best to separate into a sitemaps.py file
 
 sitemaps = {
     'leagues': LeagueSitemap,
@@ -20,7 +20,15 @@ sitemaps = {
 sitemaps = {
     'leagues': LeagueSitemap,
 }
+sitemaps_dict = {
+    'leagues': LeagueSitemap,
+    'static': StaticViewSitemap,
+}
 
+urlpatterns = [
+    # Your other URLs
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps_dict}, name='django.contrib.sitemaps.views.sitemap'),
+]
 # ✅ Now define urlpatterns
 urlpatterns = [
     path('', views.index_view, name='index'),

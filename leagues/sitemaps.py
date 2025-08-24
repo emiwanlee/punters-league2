@@ -11,3 +11,12 @@ class LeagueSitemap(Sitemap):
 
     def lastmod(self, obj):
         return None
+class StaticViewSitemap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.5
+
+    def items(self):
+        return ['home', 'about']  # Add more static views if you have them
+
+    def location(self, item):
+        return reverse(item)
