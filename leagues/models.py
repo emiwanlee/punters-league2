@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.urls import reverse
 
 # Create your models here.
 class League(models.Model):
@@ -9,6 +10,9 @@ class League(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('league_detail', args=[self.slug])
 
 """
     def save(self, *args, **kwargs):

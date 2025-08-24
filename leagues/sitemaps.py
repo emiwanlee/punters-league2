@@ -9,5 +9,5 @@ class LeagueSitemap(Sitemap):
     def items(self):
         return League.objects.all()
 
-    def location(self, obj):
-        return reverse('league_detail', args=[obj.slug])
+    def lastmod(self, obj):
+        return None
