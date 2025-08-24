@@ -1,0 +1,32 @@
+{% extends "home/base.html" %}
+{% block title %}Terms & Conditions{% endblock title %}
+
+{% block content %}
+<div style="max-width: 800px; margin: 20px auto; padding: 20px;">
+    <h2>Terms & Conditions</h2>
+    <p>Last updated: {{ now|date:"F j, Y" }}</p>
+
+    <p>Welcome to <strong>Punters-League.com</strong>. By accessing or using our website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with these terms, please do not use our website.</p>
+
+    <h3>1. Use of Our Website</h3>
+    <p>Punters-League.com provides football predictions and related content for informational purposes only. We do not guarantee the accuracy of predictions, and users are solely responsible for any decisions made based on the content.</p>
+
+    <h3>2. No Gambling Advice</h3>
+    <p>Our predictions are for entertainment purposes only. We do not encourage or facilitate gambling. Any bets you place are at your own risk and discretion.</p>
+
+    <h3>3. Intellectual Property</h3>
+    <p>All content on this website, including text, graphics, and logos, is the property of Punters-League.com and may not be copied, reproduced, or distributed without our written permission.</p>
+
+    <h3>4. Privacy Policy</h3>
+    <p>Your privacy is important to us. Please read our <a href="{% url 'privacy' %}">Privacy Policy</a> for more details on how we collect and use your data.</p>
+
+    <h3>5. Limitation of Liability</h3>
+    <p>Punters-League.com will not be liable for any loss or damage arising from the use of our website, including reliance on predictions or any other content.</p>
+
+    <h3>6. Changes to These Terms</h3>
+    <p>We reserve the right to update or modify these Terms at any time without prior notice. It is your responsibility to review this page regularly.</p>
+
+    <h3>7. Contact Us</h3>
+    <p>If you have any questions about these Terms, please contact us at <a href="mailto:admin@puntersblog.com">admin@puntersblog.com</a>.</p>
+</div>
+{% endblock %}

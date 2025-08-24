@@ -458,7 +458,11 @@ background-color:red;
   color: #999;
   margin-top: 15px;
 }
-
+.contact_us{
+  font-size: large;
+  background-color: #000;
+  color: #eee;
+}
 
 */
 .chart-img {

@@ -207,3 +207,6 @@ def Contact_us(request):
 
 def Privacy(request):
     return render(request, 'home/privacy.html')
+
+def TermsAndConditions(request):
+    return render(request, 'home/terms.html')

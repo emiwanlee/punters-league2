@@ -2,10 +2,26 @@
 {% block title %}Contact Us{% endblock title %}
 
 {% block content %}
-<div>
-<div>
-<h2>Contact us</h2>
+<div class="contact-container" style="max-width: 600px; margin: auto; padding: 20px;">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! For inquiries, feedback, or collaboration, reach out via the form below:</p>
+
+    <form action="https://formspree.io/f/mrbknkge" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+        <label>
+            Your Email:
+            <input type="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </label>
+
+        <label>
+            Your Message:
+            <textarea name="message" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px;"></textarea>
+        </label>
+
+        <button type="submit" style="background: #007bff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+    </form>
+
+    <p style="margin-top: 15px;">Or email us directly at 
+        <a href="mailto:admin@puntersblog.com" style="color: #007bff;">admin@puntersblog.com</a>
+    </p>
 </div>
 {% endblock %}
-</div>
-</html>

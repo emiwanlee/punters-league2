@@ -37,6 +37,7 @@ urlpatterns = [
     path('about/', views.About_us, name="about"),
     path('blog/', views.Blog, name="blog"),
     path('privacy/', views.Privacy, name="privacy"),
+    path('terms/', views.TermsAndConditions, name="terms"),
     path('contact/', views.Contact_us, name="contact"),
     path('spain/', views.Spain, name="spain"),
     path('belgium/', views.Belgium, name="belgium"),
