@@ -243,18 +243,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishChampionshipFixtures = [
-   ["Derby County", "Bristol City"],
-   ["Hull", "Blackburn"],
-    ["Swansea", "Watford"],
-	["Charlton", "Leicester"],
-	["Preston", "Ipswich"],
-	["Wrexham", "Sheffield Wednesday"],
-  ["Southampton", "Stoke"],
-  ["Norwich", "Middlesbrough"],
-  ["West Brom", "Portsmouth"],
-  ["Sheffield United", "Millwall"],
-  ["Coventry", "QPR"],
-  ["Birmingham", "Oxford"]
+   ["Leicester", "Birmingham"],
+   ["Stoke", "West Brom"],
+    ["QPR", "Charlton"],
+	["Middlesbrough", "Sheffield United"],
+	["Oxford", "Coventry"],
+	["Bristol", "Hull"],
+  ["Ipswich", "Derby County"],
+  ["Sheffield Wednesday", "Swansea"],
+  ["Millwall", "Wrexham"],
+  ["Blackburn", "Norwich"],
+  ["Portsmouth", "Preston"],
+  ["Watford", "southampton"]
   ];
 
   englishChampionshipTeams.forEach(t => {
@@ -346,18 +346,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Bolton", "Reading"],
-   ["Wimbledon", "Cardiff"],
-    ["Huddersfield", "Doncaster"],
-	["Luton", "Wigan"],
-	["Mansfield", "Blackpool"],
-	["Northampton", "Lincoln"],
-	["Peterborough", "Barnsley"],
-	["Plymouth", "Leyton Orient"],
-	["Port Vale", "Stevenage"],
-	["Stockport", "Bradford"],
-	["Wycombe", "Exeter"],
-	//["Blackpool", "Huddersfield"],
+   ["Doncaster", "Rotherham"],
+   ["Cardiff", "Plymouth"],
+    ["Burton", "Luton"],
+	["Wigan", "Stockport"],
+	["Stevenage", "Wycombe"],
+	["Exeter", "Peterborough"],
+	["Reading", "Port Vale"],
+	["Bradford", "Wimbledon"],
+	["Barnsley", "Huddersfield"],
+	["Blackpool", "Bolton"],
+	["Lincoln", "Mansfield"],
+	["Leyton Orient", "Northampton"],
  // ["Bolton", "Reading"]
   ];
 
