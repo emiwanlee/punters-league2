@@ -17,7 +17,9 @@
 
  }
 
-
+h2{
+  text-align: center;
+}
 .logo a {
   color: #fff;
   text-decoration: none;
@@ -375,10 +377,7 @@ background-color:red;
 .row{
   display: flex;
 }
-.bttsHeader{
-  float:center;
-  margin-left: 330px;
-}
+
 .footer {
   background-color: #111;
   color: #eee;
@@ -463,7 +462,9 @@ background-color:red;
   background-color: #000;
   color: #eee;
 }
-
+.analysis-header{
+  text-align: center;
+}
 */
 .chart-img {
   width: 300px;     /* adjust width */
