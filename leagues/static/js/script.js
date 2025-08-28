@@ -56,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["West Ham", "Chelsea"],
-    ["Manchester City", "Tottenham"],
-	["Bournemouth", "Wolves"],
-	["Burnley", "Sunderland"],
-	["Brentford", "Aston Villa"],
-	["Arsenal", "Leeds"],
-	["Crystal Palace", "Nottingham"],
-	["Everton", "Brighton"],
-	["Fulham", "Manchester United"],
-	["Newcastle", "Liverpool"]
+    ["Chelsea", "Fulham"],
+    ["Wolves", "Everton"],
+	["Tottenham", "Bournemouth"],
+	["Manchester United", "Burnley"],
+	["Sunderland", "Brentford"],
+	["Leeds", "Newcastle"],
+	["Brighton", "Manchester City"],
+	["Nottingham", "West Ham"],
+	["Liverpool", "Arsenal"],
+	["Aston Villa", "Crystal Palace"]
   ];
 
   teams.forEach(t => {
@@ -109,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (diff >= 10) prediction = "1 (Home Win)";
       else if (diff >= 5) prediction = "1X (Home Win or Draw)";
       else if (diff <= -10) prediction = "2 (Away Win)";
-      else if (diff <= -5) prediction = "X2";
+      else if (diff <= -5) prediction = "X2(Away Win or Draw)";
+      //else prediction = "Too Close"
 
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -147,15 +148,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Real Betis", "Alaves"],
-    ["Mallorca", "Celta Vigo"],
-    ["Atletico Madrid", "Elche"],
-	["Levante", "Barcelona"],
-	["Osasuna", "Valencia"],
-	["Real Sociedad", "Espanyol"],
-	["Villarreal", "Girona"],
-	["Oviedo", "Real Madrid"],
-	["Athletic Club", "Rayo Vallecano"]
+    ["Elche", "Levante"],
+    ["Valencia", "Getafe"],
+    ["Alaves", "Atletico Madrid"],
+	["Oviedo", "Real Sociedad"],
+	["Girona", "Sevilla"],
+	["Real Madrid", "Mallorca"],
+	["Celta Vigo", "Villarreal"],
+	["Real Betis", "Athletic Club"],
+	["Espanyol", "Osasuna"],
+  ["Rayo Vallecano", "Barcelona"]
   ];
 
   laligaTeams.forEach(t => {
