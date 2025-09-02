@@ -1,0 +1,35 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Home | Punters-League{% endblock title %}
+
+{% block content %}
+
+   <div class="main-body">
+<div class="web-logo">
+<img rel="Icon" src="{% static 'images/web-logo.png' %}" alt="Website logo" width="200px" height="170px"><br>
+
+
+</div>
+<div class="social-icons">
+    <a href="https://facebook.com/profile.php?id=61579007960417" target="_blank"><img src="{% static 'images/facebookicon.png' %}" alt="Facebook"></a>
+    <a href="https://x.com/PuntersLeague1" target="_blank"><img src="{% static 'images/xicon.png' %}" alt="X"></a>
+    <a href="https://www.youtube.com/channel/UClNp2eY92X1psjFR2cP-Rnw" target="_blank"><img src="{% static 'images/youtube-image.png' %}" alt="YouTube"></a>
+    <p id="time"></p>
+  </div>
+<div class="main-item">
+    <h1>Blog Posts</h1>
+<h1>All Posts</h1>
+<ul>
+  {% for post in posts %}
+    <li>
+      <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a> - {{ post.date }}
+    </li>
+  {% empty %}
+    <li>No posts available.</li>
+  {% endfor %}
+</ul>
+  </div>
+
+{% endblock %}
+
+</html>
