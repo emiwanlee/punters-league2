@@ -164,3 +164,5 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # This is for collectstatic in productio
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_URL = '/media/'
+MADIA_ROOT = os.path.join(BASE_DIR, 'media')

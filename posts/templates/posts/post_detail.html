@@ -24,10 +24,18 @@
     </div>
 
     <div class="main-item">
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.date }}</p>
-        <p>{{ post.body }}</p>
-        <a href="{% url 'posts_list' %}">Back to all posts</a>
+       <h1>{{ post.title }}</h1>
+<p><strong>Category:</strong> {{ post.get_category_display }}</p>
+<p><strong>By:</strong> {{ post.author.username }} | {{ post.date|date:"M d, Y" }}</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width:600px;">
+{% endif %}
+
+<p>{{ post.body|linebreaks }}</p>
+
+<a href="{% url 'posts:post_list' %}">← Back to posts</a>
+        
     </div>
 
 </div>
