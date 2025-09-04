@@ -24,25 +24,25 @@
     </div>
 
     <div class="main-item">
-        <!--
+        
        <h1>{{ post.title }}</h1>
-<p><strong>Category:</strong> {{ post.get_category_display }}</p>
-<p><strong>By:</strong> {{ post.author.username }} | {{ post.date|date:"M d, Y" }}</p>
+<strong>Category:</strong> {{ post.get_category_display }}
+<strong>By:</strong> {{ post.author.username }} | {{ post.date|date:"M d, Y" }}
 
 {% if post.image %}
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width:600px;">
+    <img src="{{ post.image.url }}" alt="{{ post.title|linebreaks }}" style="max-width:600px;">
 {% endif %}
 
 <p>{{ post.body|linebreaks }}</p>
 
 <a href="{% url 'posts:posts_list' %}">← Back to posts</a>
-    -->
+  <!--
 <h1>{{ post.title }}</h1>
 <p><em>Published on {{ post.date }}</em></p>
 <div>
     {{ post.content|safe }}
 </div>
     </div>
-
+-->
 </div>
 {% endblock %}

@@ -38,6 +38,22 @@ header{
  color:white;
  text-decoration:none;
  }
+ .main-body{
+  background-color: whitesmoke;
+ 
+ }
+ .main-body a {
+  
+  color: green;
+  text-decoration: none;
+  display: flex;
+  font-size: large;
+  font-weight: bold;
+  word-spacing: 0.2rem;
+  padding: 5px;
+
+}
+
  .navbar{
  min-height:70px;
  display:flex;
@@ -119,7 +135,9 @@ left:0;
 
 .main-item{
 display:flex;
+
 }
+
 .item{
 padding:1px;
 margin:1px;

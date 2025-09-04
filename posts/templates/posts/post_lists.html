@@ -5,15 +5,19 @@
 
 {% block content %}
 <div class="main-body">
-    <!--
-    <h1>All Posts</h1>
+    
+  <h1>  All Topics </h1>
 <ul>
     {% for post in posts %}
         <li>
+            
             <a href="{% url 'posts:post_detail' slug=post.slug %}">
-    {{ post.title }}
+    {{post.title}}
 </a>
-            <small>({{ post.date|date:"M d, Y" }})</small>
+
+
+
+        <small>({{ post.date|date:"M d, Y" }})</small>
         </li>
     {% empty %}
         <li>No posts available.</li>
@@ -21,7 +25,7 @@
 </ul>
 
 </div>
--->
+<!--
 {% for post in posts %}
     <h2><a href="{% url 'posts:post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
     <p>{{ post.date }}</p>
@@ -29,4 +33,5 @@
 {% empty %}
     <p>No posts available.</p>
 {% endfor %}
+-->
 {% endblock %}
