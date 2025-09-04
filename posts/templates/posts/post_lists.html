@@ -5,6 +5,7 @@
 
 {% block content %}
 <div class="main-body">
+    <!--
     <h1>All Posts</h1>
 <ul>
     {% for post in posts %}
@@ -20,4 +21,12 @@
 </ul>
 
 </div>
+-->
+{% for post in posts %}
+    <h2><a href="{% url 'posts:post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
+    <p>{{ post.date }}</p>
+    <p>{{ post.content|truncatewords:30 }}</p>
+{% empty %}
+    <p>No posts available.</p>
+{% endfor %}
 {% endblock %}

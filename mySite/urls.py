@@ -18,11 +18,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('leagues.urls')),
-    path('posts/', include(('posts.urls', 'posts'), namespace='posts')),
+    path('posts/', include(('posts.urls'), namespace='posts')),
+    path('', RedirectView.as_view(pattern_name='posts:posts_list', permanent=False)),
    
 
 ]
