@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://punters-league.com/sitemap.xml

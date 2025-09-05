@@ -14,9 +14,12 @@
  /* Reset */
  body{
  margin:2px;
+
  }
 
-
+h2{
+  text-align: center;
+}
 .logo a {
   color: #fff;
   text-decoration: none;
@@ -35,6 +38,22 @@ header{
  color:white;
  text-decoration:none;
  }
+ .main-body{
+  background-color: whitesmoke;
+ 
+ }
+ .main-body a {
+  
+  color: green;
+  text-decoration: none;
+  display: flex;
+  font-size: large;
+  font-weight: bold;
+  word-spacing: 0.2rem;
+  padding: 5px;
+
+}
+
  .navbar{
  min-height:70px;
  display:flex;
@@ -107,12 +126,18 @@ margin:16px 0;
 .nav-menu.active{
 left:0;
 }
+.web-logo img{
+  height:150px;
+  width:90px;
+}
 }
 
 
 .main-item{
 display:flex;
+
 }
+
 .item{
 padding:1px;
 margin:1px;
@@ -133,7 +158,54 @@ margin:1px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+ 
 
+.stats-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.stats {
+  flex: 1 1 45%; /* grow, shrink, base width */
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr; /* Adjust widths as needed */
+  background-color:rgb(3, 17, 170);
+  color:silver;
+  font-weight: bold;
+  padding: 1px;
+  text-align: center;
+  border-bottom: 2px solid #555;
+}
+
+.table-header span {
+  padding: 1px;
+}
+.table-row {
+  display: grid;
+  background-color: #ccd0d4;
+  grid-template-columns: 1fr 1fr 2fr 1fr; /* Adjust widths as needed */
+  padding: 1px;
+  text-align: center;
+}
+.table-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-row span,
+.table-header span {
+  padding: 1px;
+}
 /* Full width on smaller screens */
 @media screen and (max-width: 768px) {
   .item {
@@ -249,7 +321,7 @@ margin:1px;
     max-width: 100%;
   }
 }
-*/
+
 .chart-container {
       display: flex;
       flex-wrap: wrap; /* wrap to next line on small screens */
@@ -294,10 +366,7 @@ border-radius:14%;
 
 }
 
-.second{
-background-color:wheat;
 
-}
 /*  Premiership page*/
  .season-header{
 background-color:red;
@@ -407,8 +476,14 @@ background-color:red;
   color: #999;
   margin-top: 15px;
 }
-
-
+.contact_us{
+  font-size: large;
+  background-color: #000;
+  color: #eee;
+}
+.analysis-header{
+  text-align: center;
+}
 */
 .chart-img {
   width: 300px;     /* adjust width */

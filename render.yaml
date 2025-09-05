@@ -8,8 +8,11 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: punters-league2.settings
-    staticPublishPath: ./media
+
     routes:
       - type: static
-        source: /media/post_images
-        destination: /media/post_images
+        source: /static
+        destination: /static
+      - type: static
+        source: /media
+        destination: /media

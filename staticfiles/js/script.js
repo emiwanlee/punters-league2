@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const germanBundesligaPredictionBody = document.querySelector("#predictionsTableGermany tbody");
   const germanBundesliga2Table = document.querySelector("#germanBundesliga2ScoresTable tbody");
   const germanBundesliga2PredictionBody = document.querySelector("#predictionsTableGermany2 tbody");
+  const netherlandsEredevesieTable = document.querySelector("#netherlandsEredevesieScoresTable tbody");
+  const netherlandsEredevesiePredictionBody = document.querySelector("#predictionsTableNetherlands tbody");
+  const eersteDivisieTableBody = document.querySelector("#netherlandsEersteeDevesieScoresTable tbody");
+  const eersteDivisiePredictionBody = document.querySelector("#predictionsTableNetherlands2 tbody");
+   const belgianProLeagueTableBody = document.querySelector("#belgianProleagueDeveScoresTable tbody");
+  const belgianProLeaguePredictionBody = document.querySelector("#predictionsTableBelgium tbody");
+  const belgianChallengerProTableBody = document.querySelector("#belgianChallengerProScoresTable tbody");
+  const belgianChallengerProPredictionBody = document.querySelector("#predictionsTableBelgium2 tbody");
 
   const teams = [
     { team: "Liverpool", MP: 38, MW: 25, MD: 9, GF: 86, GA: 41 },
@@ -48,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["Liverpool", "Bournemouth"],
-    ["Aston Villa", "Newcastle"],
-	["Brighton", "Fulham"],
-	["Sunderland", "West Ham"],
-	["Tottenham", "Burnley"],
-	["Wolves", "Manchester City"],
-	["Chelsea", "Crystal Palace"],
-	["Nottingham", "Brentford"],
-	["Manchester United", "Arsenal"],
-	["Leeds", "Everton"]
+    ["Chelsea", "Fulham"],
+    ["Wolves", "Everton"],
+	["Tottenham", "Bournemouth"],
+	["Manchester United", "Burnley"],
+	["Sunderland", "Brentford"],
+	["Leeds", "Newcastle"],
+	["Brighton", "Manchester City"],
+	["Nottingham", "West Ham"],
+	["Liverpool", "Arsenal"],
+	["Aston Villa", "Crystal Palace"]
   ];
 
   teams.forEach(t => {
@@ -101,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (diff >= 10) prediction = "1 (Home Win)";
       else if (diff >= 5) prediction = "1X (Home Win or Draw)";
       else if (diff <= -10) prediction = "2 (Away Win)";
-      else if (diff <= -5) prediction = "X2";
+      else if (diff <= -5) prediction = "X2(Away Win or Draw)";
+      //else prediction = "Too Close"
 
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -139,15 +148,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Girona", "Rayo Vallecano"],
-    ["Villarreal", "Oviedo"],
-    ["Mallorca", "Barcelona"],
-	["Valencia", "Real Sociedad"],
-	["Celta Vigo", "Getafe"],
-	["Athletico Club", "Sevilla"],
-	["Espanyol", "Atletico Madrid"],
-	["Elche", "Real Betis"],
-	["Real Madrid", "Osasuna"]
+    ["Elche", "Levante"],
+    ["Valencia", "Getafe"],
+    ["Alaves", "Atletico Madrid"],
+	["Oviedo", "Real Sociedad"],
+	["Girona", "Sevilla"],
+	["Real Madrid", "Mallorca"],
+	["Celta Vigo", "Villarreal"],
+	["Real Betis", "Athletic Club"],
+	["Espanyol", "Osasuna"],
+  ["Rayo Vallecano", "Barcelona"]
   ];
 
   laligaTeams.forEach(t => {
@@ -235,12 +245,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishChampionshipFixtures = [
-   ["Birmingham", "Ipswich"],
-   ["Southampton", "Wrexham"],
-    ["Coventry", "Hull"],
-	//["Charlton", "Watford"],
-	["West Brom", "Blackburn"],
-	["Norwich", "Millwall"]
+   ["Leicester", "Birmingham"],
+   ["Stoke", "West Brom"],
+    ["QPR", "Charlton"],
+	["Middlesbrough", "Sheffield United"],
+	["Oxford", "Coventry"],
+	["Bristol", "Hull"],
+  ["Ipswich", "Derby County"],
+  ["Sheffield Wednesday", "Swansea"],
+  ["Millwall", "Wrexham"],
+  ["Blackburn", "Norwich"],
+  ["Portsmouth", "Preston"],
+  ["Watford", "southampton"]
   ];
 
   englishChampionshipTeams.forEach(t => {
@@ -332,18 +348,19 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Luton", "Wimbledon"],
-   ["Cardiff", "Peterborough"],
-    ["Blackpool", "Stevenage"],
-	["Plymouth", "Barnsley"],
-	["Rotherham", "Port Vale"],
-	["Wigan", "Northampton"],
-	["Bradford", "Wycombe"],
-	["Burton", "Mansfield"],
-	["Lincoln", "Reading"],
-	["Donacaster", "Exeter"],
-	["Huddersfield", "Leyton Orient"],
-	["Stockport", "Bolton"]
+   ["Doncaster", "Rotherham"],
+   ["Cardiff", "Plymouth"],
+    ["Burton", "Luton"],
+	["Wigan", "Stockport"],
+	["Stevenage", "Wycombe"],
+	["Exeter", "Peterborough"],
+	["Reading", "Port Vale"],
+	["Bradford", "Wimbledon"],
+	["Barnsley", "Huddersfield"],
+	["Blackpool", "Bolton"],
+	["Lincoln", "Mansfield"],
+	["Leyton Orient", "Northampton"],
+ // ["Bolton", "Reading"]
   ];
 
   englishLeagueOneTeams.forEach(t => {
@@ -435,18 +452,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueTwoFixtures = [
-   ["Colchester", "Tranmere"],
-   ["Chesterfield", "Barrow"],
-    ["Accrington Stanley", "Gillingham"],
-	["Barnet", "Fleetwood"],
-	["Walsall", "Swindon"],
-	["Bristol Rovers", "Harrogate"],
-	["Cambridge", "Cheltenham"],
-	["Grimsby", "Crawley"],
-	["Newport", "Notts County"],
-	["Salford", "Crewe"],
-	//["Shrewsbury", "Leyton Orient"],
-	["Stockport", "Bromley"]
+   ["Salford", "Cheltenham"],
+   ["Barrow", "Fleetwood"],
+    ["Crewe", "Swindon"],
+	["Oldham", "Gillingham"],
+	["Tranmere", "Notts County"],
+	["Bromley", "Harrogate"],
+	["MK Dons", "Walsall"],
+	["Shrewsbury", "Accrington Stanley"],
+	["Grimsby", "Bristol Rovers"],
+	["Barnet", "Colchester"],
+	["Cambridge", "Newport"],
+ ["Chesterfield", "Crawley"]
   ];
 
   englishLeagueTwoTeams.forEach(t => {
@@ -535,16 +552,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laliga2Fixtures = [
-    ["Cadiz", "Mirandes"],
-    ["Racing", "Castellon"],
-    ["Granada", "Deportivo"],
-	["Real Sociedad B", "Zaragoza"],
-	["Valladolid", "Ceuta"],
-	["Gijon", "Cordoba"],
-	["Malaga", "Eibar"],
-	["Burgos", "Cultural Leonesa"],
-	["Huesca", "Leganes"],
-	["Las Palmas", "Andorra"]
+    ["Real Sociedad B", "Almeria"],
+    ["Gijon", "Cultural Leonesa"],
+    ["Racing", "Ceuta"],
+	["Valladolid", "Cordoba"],
+	["Castellon", "Zaragoza"],
+	["Andorra", "Burgos"],
+	["Cadiz", "Albacete"],
+	["Las Palmas", "Malaga"],
+	["Granada", "Mirandes"],
+	["Huesca", "Eibar"],
+  ["Leganes", "Deportivo"]
   ];
 
   laliga2Teams.forEach(t => {
@@ -626,16 +644,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const italianSerieAFixtures = [
-    ["Genoa", "Leece"],
-    ["Sassuolo", "Napoli"],
-    ["Roma", "Bologna"],
-	["Milan", "Cremonese"],
-	["Cagliari", "Fiorentina"],
-	["Como", "Lazio"],
-	["Juventus", "Parma"],
-	["Atalanta", "Pisa"],
-	["Udinese", "Verona"],
-	["Inter", "Torino"]
+    ["Cremonese", "Sassulo"],
+    ["Leece", "Milan"],
+    ["Bologna", "Como"],
+	["Parma", "Atalanta"],
+	["Napoli", "Cagliari"],
+	["Pisa", "Roma"],
+	["Torino", "Fiorentina"],
+	["Genoa", "Juventus"],
+	["Inter", "Udinese"],
+	["Lazio", "Verona"]
 	
   ];
 
@@ -722,16 +740,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const italianSerieBFixtures = [
-    ["Spezia", "Carrarese"],
-    ["Sampdoria", "Modena"],
-    ["Empoli", "Padova"],
-	["Palermo", "Reggiana"],
-	["Virtus Entella", "Juve Stabia"],
-	["Catanzaro", "Sudtirol"],
-	["Monza", "Mantova"],
-	["Pescara", "Cesena"],
-	["Venezia", "Bari"],
-	["Frisonone", "Avellino"]
+    ["Reggiana", "Empoli"],
+    ["Mantova", "Pescara"],
+    ["Juve Stabia", "Venezia"],
+	["Spezia", "Catanzaro"],
+	["Cesena", "Virtus Entella"],
+	["Palermo", "Frisonone"],
+	["Sudtirol", "Sampdoria"],
+	["Carrarese", "Padova"],
+	["Modena", "Avellino"],
+	["Bari", "Monza"]
 	
   ];
 
@@ -815,15 +833,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueOneFixtures = [
-    ["Auxerre", "Lorient"],
-    ["Rennes", "Marseille"],
-    ["Angers", "Paris FC"],
-	["Nice", "Toulouse"],
-	["Monaco", "Le Havre"],
-	["Brest", "Lille"],
-	["Nantes", "PSG"],
-	["Lens", "Lyon"],
-	["Metz", "Strasbourg"]
+    ["Lens", "Brest"],
+    ["Lorient", "Lille"],
+    ["Nantes", "Auxerre"],
+	["Toulouse", "PSG"],
+	["Angers", "Rennes"],
+	["Paris", "Metz"],
+	["Monaco", "Strasbourg"],
+	["Le Havre", "Nice"],
+	["Lyon", "Marseille"],
+ // ["Lille", "Monaco"]
 	
 	
   ];
@@ -907,15 +926,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueTwoFixtures = [
-    ["Guingamp", "Le Mans"],
-    ["Pau", "Annecy"],
-    ["Dunkerque", "Clermont Foot"],
-	["Laval", "St. Etienne"],
-	["Ajaccio", "Bastia"],
-	["Rodez", "Nancy"],
-	["Troyes", "Grenoble"],
-	["Montpellier", "Red Star"],
-	["Amiens", "Reims"]
+    ["Red star", "Annecy"],
+    ["Rodez", "Boulogne"],
+    ["Montpellier", "Amiens"],
+	["Laval", "Clermont Foot"],
+	["Nancy", "Pau"],
+	["Dunkerque", "Troyes"],
+	["Bastia", "Guingamp"],
+	["Reims", "Le Mans"],
+	["St. Etienne", "Grenoble"]
 	
 	
   ];
@@ -999,15 +1018,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesligaFixtures = [
-    ["Bayern", "Leipzig"],
-    ["Leverkusen", "Hoffenheim"],
-    ["Union Berlin", "Stuttgart"],
-	["Heidenheim", "Wolfsburg"],
-	["Freiburg", "Augsburg"],
-	["Frankfurt", "Werder"],
-	["St. Pauli", "Dortmund"],
-	["Mainz", "Koln"],
-	["Monchengladbach", "Hamburger"]
+    ["Hamburger", "St. Pauli"],
+    ["Hoffenheim", "Frankfurt"],
+    ["Leipzig", "Heidenheim"],
+	["Werder", "Leverkusen"],
+	["Stuttgart", "Monchengladbach"],
+	["Augsburg", "Bayern"],
+	["Wolfsburg", "Mainz"],
+	["Dortmund", "Union Berlin"],
+	["Koln", "Freiburg"]
 	
 	
   ];
@@ -1092,15 +1111,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesliga2Fixtures = [
-    ["Schalke", "Hertha"],
-    ["Darmstadt", "Bochum"],
-    ["Paderborn", "Holstein Kiel"],
-	["Karlsruher", "Preuben Munster"],
-	["Elvesberg", "Nurnberg"],
-	["Arminia", "Dusseldorf"],
-	["Magdeburg", "Braunschweig"],
-	["Geuther Furth", "Dynamo"],
-	["Hannover", "Kaiserslautern"]
+    ["Nurnberg", "Padeborn"],
+    ["Hertha", "Elvesberg"],
+    ["Holstein Kiel", "Hannover"],
+	["Bochum", "Preuben Munster"],
+	["Braunschweig", "Arminia"],
+	["Dusseldorf", "Karlsruher"],
+	["Dynamo", "Schalke"],
+	["Kaiserslautern", "Darmstadt"],
+	["Magdeburg", "Greuther Furth"]
+        
 	
 	
   ];
@@ -1160,4 +1180,376 @@ document.addEventListener("DOMContentLoaded", function () {
       germanBundesliga2PredictionBody.appendChild(row);
     });
   }
+  
+  const netherlandsEredevesieTeams = [
+    { team: "PSV", MP: 34, MW: 25, MD: 4, GF: 103, GA: 39 },
+    { team: "Ajax", MP: 34, MW: 24, MD: 6, GF: 67, GA: 32 },
+    { team: "Feyenoord", MP: 34, MW: 20, MD: 8, GF:76, GA: 38 },
+	{ team: "Utrecht", MP: 34, MW: 18, MD: 10, GF: 62, GA: 45 },
+    { team: "AZ Alkmaar", MP: 34, MW: 16, MD: 9, GF: 58, GA: 37 },
+    { team: "Twente", MP: 34, MW: 15, MD: 9, GF: 62, GA: 49 },
+    { team: "Go Ahead Eagles", MP: 34, MW: 14, MD: 9, GF: 57, GA: 55 },
+    { team: "NEC", MP: 34, MW: 12, MD: 7, GF: 51, GA: 46 },
+    { team: "Heerenveen", MP: 34, MW: 12, MD: 7, GF: 42, GA: 57 },
+	{ team: "Zwolle", MP: 34, MW: 10, MD: 11, GF: 43, GA: 51 },
+	{ team: "Fortuna Sittard", MP: 34, MW: 11, MD: 8, GF: 37, GA: 54 },
+	{ team: "Sparta Rotterdam", MP: 34, MW: 9, MD: 12, GF: 39, GA: 43 },
+	{ team: "Groningen", MP: 34, MW: 10, MD: 9, GF: 40, GA: 53 },
+	{ team: "Heracles", MP: 34, MW: 9, MD: 11, GF: 42, GA: 53 },
+	{ team: "NAC", MP: 34, MW: 8, MD: 9, GF: 34, GA: 58 },
+	{ team: "Wilhelm II", MP: 34, MW: 6, MD: 8, GF: 34, GA: 56 },
+	{ team: "RKC Waalwijk", MP: 34, MW: 6, MD: 7, GF: 44, GA: 74 },
+	{ team: "Almere", MP: 34, MW: 4, MD: 10, GF: 23, GA: 79 },
+	
+  ];
+
+  const netherlandsEredevesieFixtures = [
+  ["Groningen", "Heracles"],
+  ["Heerenveen", "Go Ahead Eagles"],
+  ["PSV", "Telstar"],
+	["Excelsior", "Twente"],
+	["Fotruna Sittard", "NEC"],
+	["Zwolle", "Utecht"],
+["Sparta", "Rotterdam"],
+	["NAC", "AZ Alkmaar"],
+//	["Volendam", "AZ Alkmaar"],
+//  ["NAC", "Fortuna Sittard"]
+	
+	
+  ];
+
+  netherlandsEredevesieTeams.forEach(t => {
+    t.ML = t.MP - (t.MW + t.MD);
+    t.GD = t.GF - t.GA;
+    t.points = t.MW * 3 + t.MD;
+    t.power = (t.points / (t.MP * 3)) * 100;
+  });
+
+  netherlandsEredevesieFixtures.sort((a, b) => b.points - a.points);
+
+  if (netherlandsEredevesieTable) {
+    netherlandsEredevesieTeams.forEach((team, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${team.team}</td>
+        <td>${team.MP}</td>
+        <td>${team.MW}</td>
+        <td>${team.MD}</td>
+        <td>${team.ML}</td>
+        <td>${team.GF}</td>
+        <td>${team.GA}</td>
+        <td>${team.GD}</td>
+        <td>${team.points}</td>
+      `;
+      netherlandsEredevesieTable.appendChild(row);
+    });
+  }
+
+  if (netherlandsEredevesiePredictionBody) {
+    netherlandsEredevesieFixtures.forEach(([home, away]) => {
+      const homeTeam = netherlandsEredevesieTeams.find(t => t.team === home);
+      const awayTeam = netherlandsEredevesieTeams.find(t => t.team === away);
+      if (!homeTeam || !awayTeam) return;
+
+      const homePower = homeTeam.power + 10;
+      const awayPower = awayTeam.power;
+      const diff = homePower - awayPower;
+
+      let prediction = "X";
+      if (diff >= 10) prediction = "1 (Home Win)";
+      else if (diff >= 5) prediction = "1X";
+      else if (diff <= -10) prediction = "2 (Away Win)";
+      else if (diff <= -5) prediction = "X2";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${home}</td>
+        <td>${away}</td>
+        <td>${homePower.toFixed(2)}</td>
+        <td>${awayPower.toFixed(2)}</td>
+        <td>${prediction}</td>
+      `;
+      netherlandsEredevesiePredictionBody.appendChild(row);
+    });
+  }
+   const eersteDivisieTeams = [
+    { team: "Volendam", MP: 38, MW: 26, MD: 4, GF: 87, GA: 48 },
+    { team: "Excelsior", MP: 38, MW: 22, MD: 8, GF: 74, GA: 38 },
+    { team: "Cambuur", MP: 38, MW: 22, MD: 5, GF: 63, GA: 42 },
+    { team: "Den Haag", MP: 38, MW: 20, MD: 10, GF: 69, GA: 47 },
+    { team: "Dordrecht", MP: 38, MW: 20, MD: 6, GF: 68, GA: 47 },
+    { team: "De Graafschap", MP: 38, MW: 19, MD: 8, GF: 69, GA: 46 },
+    { team: "Telstar", MP: 38, MW: 17, MD: 10, GF: 69, GA: 47 },
+    { team: "Emmen", MP: 38, MW: 17, MD: 5, GF: 56, GA: 53 },
+    { team: "Den Bosch", MP: 38, MW: 15, MD: 10, GF: 53, GA: 48 },
+    { team: "Jong AZ", MP: 38, MW: 14, MD: 10, GF: 63, GA: 69 },
+    { team: "Eindhoven", MP: 38, MW: 14, MD: 9, GF: 58, GA: 64 },
+    { team: "Roda", MP: 38, MW: 13, MD: 10, GF: 49, GA: 57 },
+    { team: "Helmond", MP: 38, MW: 12, MD: 10, GF: 53, GA: 61 },
+    { team: "VVV", MP: 38, MW: 11, MD: 8, GF: 44, GA: 69 },
+    { team: "MVV", MP: 38, MW: 10, MD: 10, GF: 52, GA: 59 },
+    { team: "TOP Oss", MP: 38, MW: 8, MD: 14, GF: 31, GA: 61 },
+    { team: "Jong Ajax", MP: 38, MW: 9, MD: 9, GF: 37, GA: 52 },
+    { team: "Jong PSV", MP: 38, MW: 8, MD: 8, GF: 55, GA: 86 },
+    { team: "Jong Utrecht", MP: 38, MW: 4, MD: 11, GF: 31, GA: 82 },
+    { team: "Vitesse", MP: 38, MW: 11, MD: 11, GF: 54, GA: 73 }
+  ];
+
+  const eersteDivisieFixtures = [
+    ["Wilhelm II", "Jong Utrecht"],
+    ["Emmen", "Den Bosch"],
+	["TOP Oss", "Dordrecht"],
+	["Jong PSV", "Jong AZ"],
+	["Roda", "Eindhoven"],
+	["Jong Ajax", "MVV"],
+	["Den Haag", "Helmond"],
+	["Waalwijk", "Almere"],
+	["Cambuur", "VVV"],
+//	["Jong Utrecht", "Jong Ajaz"]
+  ];
+
+  eersteDivisieTeams.forEach(t => {
+    t.ML = t.MP - (t.MW + t.MD);
+    t.GD = t.GF - t.GA;
+    t.points = t.MW * 3 + t.MD;
+    t.power = (t.points / (t.MP * 3)) * 100;
+  });
+
+  eersteDivisieTeams.sort((a, b) => b.points - a.points);
+
+  if (eersteDivisieTableBody) {
+    eersteDivisieTeams.forEach((team, i) => {
+      const row =`
+       <tr>
+        <td>${i + 1}</td>
+        <td>${team.team}</td>
+        <td>${team.MP}</td>
+        <td>${team.MW}</td>
+        <td>${team.MD}</td>
+        <td>${team.ML}</td>
+        <td>${team.GF}</td>
+        <td>${team.GA}</td>
+        <td>${team.GD}</td>
+        <td>${team.points}</td>
+      </tr>`;
+      eersteDivisieTableBody.innerHTML += row;
+    });
+  }
+
+  if (eersteDivisiePredictionBody) {
+    eersteDivisieFixtures.forEach(([home, away]) => {
+      const homeTeam = eersteDivisieTeams.find(t => t.team === home);
+      const awayTeam = eersteDivisieTeams.find(t => t.team === away);
+      if (!homeTeam || !awayTeam) return;
+
+      const homePower = homeTeam.power + 10;
+      const awayPower = awayTeam.power;
+      const diff = homePower - awayPower;
+
+      let prediction = "X (Draw)";
+      if (diff >= 10) prediction = "1 (Home Win)";
+      else if (diff >= 5) prediction = "1X (Home Win or Draw)";
+      else if (diff <= -10) prediction = "2 (Away Win)";
+      else if (diff <= -5) prediction = "X2";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${home}</td>
+        <td>${away}</td>
+        <td>${homePower.toFixed(2)}</td>
+        <td>${awayPower.toFixed(2)}</td>
+        <td>${prediction}</td>
+      `;
+      eersteDivisiePredictionBody.appendChild(row);
+    });
+  }
+
+  const belgianProLeagueTeams = [
+  { team: "Genk", MP: 30, MW: 21, MD: 5, GF: 55, GA: 33 },
+  { team: "Club Brugge", MP: 30, MW: 17, MD: 8, GF: 65, GA: 36 },
+  { team: "Union Saint Gilloise", MP: 30, MW: 15, MD: 10, GF: 49, GA: 25 },
+  { team: "Anderlecht", MP: 30, MW: 15, MD: 6, GF: 50, GA: 27 },
+  { team: "Antwerp", MP: 30, MW: 12, MD: 10, GF: 47, GA: 32 },
+  { team: "Gent", MP: 30, MW: 11, MD: 12, GF: 41, GA: 33 },
+  { team: "Standard", MP: 30, MW: 10, MD: 9, GF: 22, GA: 35 },
+  { team: "Mechelen", MP: 30, MW: 10, MD: 8, GF: 45, GA: 40 },
+  { team: "Westerlo", MP: 30, MW: 10, MD: 7, GF: 50, GA: 49 },
+  { team: "Charleroi", MP: 30, MW: 10, MD: 7, GF: 36, GA: 36 },
+  { team: "Oud Heverlee Leuven", MP: 30, MW: 8, MD: 13, GF: 28, GA: 33 },
+  { team: "Dender", MP: 30, MW: 8, MD: 8, GF: 33, GA: 51 },
+  { team: "Cercle Brugge", MP: 30, MW: 7, MD: 11, GF: 29, GA: 44 },
+  { team: "STVV", MP: 30, MW: 7, MD: 10, GF: 41, GA: 56 },
+  { team: "Kotrijk", MP: 30, MW: 7, MD: 5, GF: 28, GA: 55 },
+  { team: "Beerschot", MP: 30, MW: 3, MD: 9, GF: 26, GA: 60 }
+];
+
+const belgianProLeagueFixtures = [
+  ["Cercle Brugge", "STVV"],
+  ["Mechelen", "La Louviere"],
+  ["Westerlo", "Antwerp"],
+   ["Gent", "Club Brugge"],
+  ["Charleroi", "Dender"],
+  ["Oud Heverlee Leuven", "Standard"],
+  ["Union Saint Gilloise", "Anderlecht"],
+  ["Genk", "Zulte Waregem"]
+];
+
+
+
+/*const teams = belgianProLeagueTeams;
+const fixtures = belgianProLeagueFixtures;
+const tableBody = belgianProLeagueTableBody;
+const predictionBody = belgianProLeaguePredictionBody;
+*/
+
+belgianProLeagueTeams.forEach(t => {
+  t.ML = t.MP - (t.MW + t.MD);
+  t.GD = t.GF - t.GA;
+  t.points = t.MW * 3 + t.MD;
+  t.power = (t.points / (t.MP * 3)) * 100;
 });
+
+belgianProLeagueTeams.sort((a, b) => b.points - a.points);
+
+if (belgianProLeagueTableBody) {
+  belgianProLeagueTeams.forEach((team, i) => {
+    const row = `<tr>
+      <td>${i + 1}</td>
+      <td>${team.team}</td>
+      <td>${team.MP}</td>
+      <td>${team.MW}</td>
+      <td>${team.MD}</td>
+      <td>${team.ML}</td>
+      <td>${team.GF}</td>
+      <td>${team.GA}</td>
+      <td>${team.GD}</td>
+      <td>${team.points}</td>
+    </tr>`;
+    belgianProLeagueTableBody.innerHTML += row;
+  });
+}
+
+if (belgianProLeaguePredictionBody) {
+  belgianProLeagueFixtures.forEach(([home, away]) => {
+    const homeTeam = belgianProLeagueTeams.find(t => t.team === home);
+    const awayTeam = belgianProLeagueTeams.find(t => t.team === away);
+    if (!homeTeam || !awayTeam) return;
+
+    const homePower = homeTeam.power + 10;
+    const awayPower = awayTeam.power;
+    const diff = homePower - awayPower;
+
+    let prediction = "X (Draw)";
+    if (diff >= 10) prediction = "1 (Home Win)";
+    else if (diff >= 5) prediction = "1X (Home Win or Draw)";
+    else if (diff <= -10) prediction = "2 (Away Win)";
+    else if (diff <= -5) prediction = "X2";
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${home}</td>
+      <td>${away}</td>
+      <td>${homePower.toFixed(2)}</td>
+      <td>${awayPower.toFixed(2)}</td>
+      <td>${prediction}</td>
+    `;
+    belgianProLeaguePredictionBody.appendChild(row);
+  });
+}
+
+const belgianChallengerProTeams = [
+  { team: "Zulte Waregem", MP: 28, MW: 18, MD: 5, GF: 55, GA: 30 },
+  { team: "La Louviere", MP: 28, MW: 17, MD: 8, GF: 50, GA: 24 },
+  { team: "Daring Brussels", MP: 34, MW: 17, MD: 6, GF: 42, GA: 21 },
+  { team: "Sk Beveren", MP: 28, MW: 14, MD: 9, GF: 41, GA: 47 },
+  { team: "Patro Eisden", MP: 28, MW: 13, MD: 10, GF: 51, GA: 28 },
+  { team: "Club NXT", MP: 28, MW: 14, MD: 5, GF: 46, GA: 35 },
+  { team: "Lokeren-Temse", MP: 28, MW: 12, MD: 5, GF: 32, GA: 35 },
+  { team: "Lierse K", MP: 28, MW: 11, MD: 7, GF: 40, GA: 35 },
+  { team: "RFC Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
+  { team: "Eupen", MP: 28, MW: 8, MD: 6, GF: 38, GA: 47 },
+  { team: "Lommel", MP: 28, MW: 8, MD: 5, GF: 32, GA: 46 },
+  { team: "Francs Borains", MP: 28, MW: 8, MD: 4, GF: 29, GA: 50 },
+  { team: "RSCA Futures", MP: 28, MW: 5, MD: 8, GF: 41, GA: 54 },
+  { team: "RFC Seraing", MP: 28, MW: 3, MD: 10, GF: 28, GA: 55 },
+  { team: "Jong Genk", MP: 28, MW: 3, MD: 5, GF: 30, GA: 62 }
+];
+
+const belgianChallengerProFixtures = [
+  ["Kotrijk", "Francs Borains"],
+  ["Sk Beveren", "Jong Genk"],
+  ["Beerschot", "Lierse K"],
+  ["RFC Lierge", "Patro Eisden"],
+  ["Eupen", "RSCA Futures"],
+  ["Lommel", "Lokeren-Temse"],
+  ["RFC Seraing", "ROC Charleroi"],
+  ["Club NXT", "Jong Genk"],
+  //["RFc Liege", "RFC Seraing"]
+];
+
+
+
+/*const teams = belgianProLeagueTeams;
+const fixtures = belgianProLeagueFixtures;
+const tableBody = belgianProLeagueTableBody;
+const predictionBody = belgianProLeaguePredictionBody;
+*/
+
+belgianChallengerProTeams.forEach(t => {
+  t.ML = t.MP - (t.MW + t.MD);
+  t.GD = t.GF - t.GA;
+  t.points = t.MW * 3 + t.MD;
+  t.power = (t.points / (t.MP * 3)) * 100;
+});
+
+belgianChallengerProTeams.sort((a, b) => b.points - a.points);
+
+if (belgianChallengerProTableBody) {
+  belgianChallengerProTeams.forEach((team, i) => {
+    const row = `<tr>
+      <td>${i + 1}</td>
+      <td>${team.team}</td>
+      <td>${team.MP}</td>
+      <td>${team.MW}</td>
+      <td>${team.MD}</td>
+      <td>${team.ML}</td>
+      <td>${team.GF}</td>
+      <td>${team.GA}</td>
+      <td>${team.GD}</td>
+      <td>${team.points}</td>
+    </tr>`;
+    belgianChallengerProTableBody.innerHTML += row;
+  });
+}
+
+if (belgianChallengerProPredictionBody) {
+  belgianChallengerProFixtures.forEach(([home, away]) => {
+    const homeTeam = belgianChallengerProTeams.find(t => t.team === home);
+    const awayTeam = belgianChallengerProTeams.find(t => t.team === away);
+    if (!homeTeam || !awayTeam) return;
+
+    const homePower = homeTeam.power + 10;
+    const awayPower = awayTeam.power;
+    const diff = homePower - awayPower;
+
+    let prediction = "X (Draw)";
+    if (diff >= 10) prediction = "1 (Home Win)";
+    else if (diff >= 5) prediction = "1X (Home Win or Draw)";
+    else if (diff <= -10) prediction = "2 (Away Win)";
+    else if (diff <= -5) prediction = "X2";
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${home}</td>
+      <td>${away}</td>
+      <td>${homePower.toFixed(2)}</td>
+      <td>${awayPower.toFixed(2)}</td>
+      <td>${prediction}</td>
+    `;
+    belgianChallengerProPredictionBody.appendChild(row);
+  });
+}
+
+
+  });

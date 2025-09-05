@@ -151,15 +151,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 
-
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-#STATICFILES_DIRS = [
-#    BASE_DIR / "static",  # Only this one, not from inside the app again
-#]
-
-STATIC_ROOT = BASE_DIR / "staticfiles"  # This is for collectstatic in production
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
