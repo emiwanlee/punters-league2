@@ -165,7 +165,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # This is for collectstatic in productio
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-"""
+
 MEDIA_URL = '/media/'
 MADIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -175,5 +175,5 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '485638436986578',
     'API_SECRET': 'RyeEK_txPlOUZ9nseD921i7B4Pw'
 }
-
+"""
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
