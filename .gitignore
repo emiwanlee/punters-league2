@@ -8,8 +8,7 @@ __pycache__/
 
 # Django static/media files
 /media/*
-!/media/post_images/
-/media/post_images/*
+!media/post_images/**
 
 # Logs
 *.log
