@@ -176,7 +176,7 @@ margin:1px;
 .table-header {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr; /* Adjust widths as needed */
-  background-color: rgb(32, 5, 91);
+  background-color:rgb(3, 17, 170);
   color:silver;
   font-weight: bold;
   padding: 1px;
@@ -189,6 +189,7 @@ margin:1px;
 }
 .table-row {
   display: grid;
+  background-color: #ccd0d4;
   grid-template-columns: 1fr 1fr 2fr 1fr; /* Adjust widths as needed */
   padding: 1px;
   text-align: center;
