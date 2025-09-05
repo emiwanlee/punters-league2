@@ -30,10 +30,11 @@
 <strong>By:</strong> {{ post.author.username }} | {{ post.date|date:"M d, Y" }}
 
 
-{% if post.image %}
-    <img src="{{ post.image.url }}" alt="{{ post.title|linebreaks }}" style="max-width:600px;">
+{% if post.cloudinary_url %}
+    <img src="{{ post.cloudinary_url }}" alt="{{ post.title }}" style="max-width:600px;">
+{% elif post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width:600px;">
 {% endif %}
-
 {{ post.body|linebreaks }}
 
 <a href="{% url 'posts:posts_list' %}">← Back to posts</a>

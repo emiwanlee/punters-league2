@@ -24,7 +24,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='post_images/',blank=True, null=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='general')
-
+    cloudinary_url = models.URLField(max_length=500,blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -33,3 +33,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+    
