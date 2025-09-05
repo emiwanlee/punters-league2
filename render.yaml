@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: punters-league
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn punters-league2.wsgi"
+    plan: free
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: punters-league2.settings
+    staticPublishPath: ./media
+    routes:
+      - type: static
+        source: /media
+        destination: /media
