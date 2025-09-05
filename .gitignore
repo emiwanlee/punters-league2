@@ -7,8 +7,9 @@ __pycache__/
 *.env
 
 # Django static/media files
-/staticfiles/
-/media/
+/media/*
+!/media/post_images/
+/media/post_images/*
 
 # Logs
 *.log

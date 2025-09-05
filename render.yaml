@@ -11,5 +11,5 @@ services:
     staticPublishPath: ./media
     routes:
       - type: static
-        source: /media
-        destination: /media
+        source: /media/post_images
+        destination: /media/post_images
