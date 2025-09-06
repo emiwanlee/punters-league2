@@ -348,18 +348,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Doncaster", "Rotherham"],
-   ["Cardiff", "Plymouth"],
-    ["Burton", "Luton"],
-	["Wigan", "Stockport"],
-	["Stevenage", "Wycombe"],
-	["Exeter", "Peterborough"],
-	["Reading", "Port Vale"],
-	["Bradford", "Wimbledon"],
-	["Barnsley", "Huddersfield"],
-	["Blackpool", "Bolton"],
-	["Lincoln", "Mansfield"],
-	["Leyton Orient", "Northampton"],
+   ["Port Vale", "Leyton Orient"],
+   ["Plymouth", "Stockport"],
+    ["Bolton", "Wimbledon"],
+	["Doncaster", "Bradford"],
+	["Stevenage", "Barnsley"],
+	["Rotherham", "Exeter"],
+	["Lincoln", "Wigan"],
+	["Reading", "Northampton"],
+	["Wycombe", "Mansfield"],
+	["Huddersfield", "Peterborough"],
+	//["Lincoln", "Mansfield"],
+	//["Leyton Orient", "Northampton"],
  // ["Bolton", "Reading"]
   ];
 
@@ -452,18 +452,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueTwoFixtures = [
-   ["Salford", "Cheltenham"],
-   ["Barrow", "Fleetwood"],
-    ["Crewe", "Swindon"],
-	["Oldham", "Gillingham"],
-	["Tranmere", "Notts County"],
-	["Bromley", "Harrogate"],
-	["MK Dons", "Walsall"],
-	["Shrewsbury", "Accrington Stanley"],
-	["Grimsby", "Bristol Rovers"],
-	["Barnet", "Colchester"],
-	["Cambridge", "Newport"],
- ["Chesterfield", "Crawley"]
+   ["Newport", "Bristol"],
+   ["Walsall", "Chesterfield"],
+    ["Cambridge", "Oldham"],
+	["MK Dons", "Grimsby"],
+	["Harrogate", "Crawley"],
+	["Salford", "Tranmere"],
+	["Colchester", "Crewe"],
+	["Barrow", "Swindon"],
+	["Notts County", "Fleetwood"],
+	["Barnet", "Shrewsbury"],
+	["Cheltenham", "Accrinton Stanley"],
+ ["Bromley", "Gillingham"]
   ];
 
   englishLeagueTwoTeams.forEach(t => {
@@ -552,17 +552,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laliga2Fixtures = [
-    ["Real Sociedad B", "Almeria"],
-    ["Gijon", "Cultural Leonesa"],
-    ["Racing", "Ceuta"],
-	["Valladolid", "Cordoba"],
-	["Castellon", "Zaragoza"],
-	["Andorra", "Burgos"],
-	["Cadiz", "Albacete"],
-	["Las Palmas", "Malaga"],
-	["Granada", "Mirandes"],
-	["Huesca", "Eibar"],
-  ["Leganes", "Deportivo"]
+    ["Albacete", "Mirandes"],
+    ["Cordoba", "Castellon"],
+    ["Deportivo", "Gijon"],
+	["Malaga", "Granada"],
+	["Ceuta", "Huesca"],
+	["Real Sociedad B", "Cadiz"],
+	["Burgos", "Las Palmas"],
+	["Almeria", "Racing"],
+	["Cultural Leonesa", "Leganes"],
+	["Eibar", "Andorra"],
+  //["Leganes", "Deportivo"]
   ];
 
   laliga2Teams.forEach(t => {
