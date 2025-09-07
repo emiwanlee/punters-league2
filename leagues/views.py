@@ -65,12 +65,12 @@ def league_table(request, league_id):
         'league': league,
         'teams': teams
     })
-"""
+
 def index_view(request):
     leagues = League.objects.all()
     return render(request, 'home/index.html', {'leagues':leagues})
 
-
+"""
 
     #return render(request, 'home/premiership.html')
 

@@ -23,8 +23,7 @@
 <body data-league="epl">
 <header>
 <nav class="navbar">
-<a href="{% url 'index' %}" class="nav-branding">Home</a>
-<a href="{% url 'posts:posts_list' %}" class="nav-branding">Posts</a>
+<a href="{% url 'posts:posts_list' %}" class="nav-branding">Blog</a>
 
 <ul class="nav-menu">
 <li class="nav-item">
@@ -59,9 +58,9 @@
   <p><strong>Punters League</strong> is your go-to platform for football predictions and stats.</p>
 
   <ul class="footer-links">
-    <li><a href="{% url 'index' %}">Home</a></li>
+    
     <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="{% url 'blog' %}">Blog</a></li>
+    <li><a href="{% url 'posts:posts_list' %}">Blog</a></li>
     <li><a href="{% url 'contact' %}">Contact</a></li>
     <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
     <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
