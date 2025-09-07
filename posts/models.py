@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
@@ -25,6 +26,10 @@ class Post(models.Model):
     image = models.ImageField(upload_to='post_images/',blank=True, null=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='general')
     cloudinary_url = models.URLField(max_length=500,blank=True, null=True)
+
+
+    def get_absolute_url(self):
+        return reverse("post_detail", args=[self.slug]) 
 
     def save(self, *args, **kwargs):
         if not self.slug:

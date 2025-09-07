@@ -3,7 +3,7 @@ from . import views
 from django.views.generic import TemplateView
 from django.contrib.sitemaps import Sitemap
 from django.contrib.sitemaps.views import sitemap  # ✅ Note: use .views not .as_views
-from .sitemaps import LeagueSitemap, StaticViewSitemap  # best to separate into a sitemaps.py file
+from .sitemaps import LeagueSitemap, StaticViewSitemap, PostSitemap  # best to separate into a sitemaps.py file
 
 sitemaps = {
     'leagues': LeagueSitemap,
@@ -23,6 +23,7 @@ sitemaps = {
 sitemaps_dict = {
     'leagues': LeagueSitemap,
     'static': StaticViewSitemap,
+    'posts': PostSitemap,
 }
 
 urlpatterns = [
