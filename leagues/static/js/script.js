@@ -56,16 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["Chelsea", "Fulham"],
-    ["Wolves", "Everton"],
-	["Tottenham", "Bournemouth"],
-	["Manchester United", "Burnley"],
-	["Sunderland", "Brentford"],
-	["Leeds", "Newcastle"],
-	["Brighton", "Manchester City"],
-	["Nottingham", "West Ham"],
-	["Liverpool", "Arsenal"],
-	["Aston Villa", "Crystal Palace"]
+    ["Arsenal", "Nottingham"],
+    ["Bournemouth", "Brighton"],
+    ["Newcastle", "Wolves"],
+	["Everton", "Aston Villa"],
+	["Crystal Palace", "Sunderland"],
+	["Fulham", "Leeds"],
+	["West Ham", "Tottenham"],
+	["Brentford", "Chelsea"],
+	["Burnley", "Liverpool"],
+	["Manchester City", "Manchester United"]
+	
   ];
 
   teams.forEach(t => {
@@ -148,16 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Elche", "Levante"],
-    ["Valencia", "Getafe"],
-    ["Alaves", "Atletico Madrid"],
-	["Oviedo", "Real Sociedad"],
-	["Girona", "Sevilla"],
-	["Real Madrid", "Mallorca"],
-	["Celta Vigo", "Villarreal"],
-	["Real Betis", "Athletic Club"],
-	["Espanyol", "Osasuna"],
-  ["Rayo Vallecano", "Barcelona"]
+    ["Sevilla", "Elche"],
+    ["Getafe", "Oviedo"],
+    ["Real Sociedad", "Real Madrid"],
+	["Athletic Club", "Alaves"],
+	["Atletico Madrid", "Villarreal"],
+	["Celta Vigo", "Girona"],
+	["Levante", "Real Betis"],
+	["Osasuna", "Rayo Vallecano"],
+	["Barcelona", "Valencia"],
+  ["Espanyol", "Mallorca"]
   ];
 
   laligaTeams.forEach(t => {
