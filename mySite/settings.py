@@ -1,3 +1,136 @@
+
+# mySite/settings.py
+
+from pathlib import Path
+import os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Base directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Security
+SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")  # fallback for local
+DEBUG = os.getenv("DEBUG", "False") == "True"
+
+ALLOWED_HOSTS = [
+    "punters-league.com",
+    "www.punters-league.com",
+    "127.0.0.1",
+    "localhost",
+]
+
+# 🔹 Database: SQLite for local, Postgres for production
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+else:
+    DATABASES = {
+        "default": dj_database_url.parse(
+            "postgresql://punters_user:DjFMa9CSVeJXgWAdulgDDgUhRdNJKQBx@dpg-d27fm57diees73ci4uqg-a.oregon-postgres.render.com/puntersdb",
+            conn_max_age=600,
+            ssl_require=True,
+        )
+    }
+
+# Applications
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "leagues",
+    "posts",
+    "django.contrib.sitemaps",
+    "cloudinary",
+    "cloudinary_storage",
+]
+
+# Middleware
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
+
+# Static files
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+# 🔹 Static storage: normal in dev, compressed in production
+if DEBUG:
+    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+else:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Cloudinary for media
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "dn6pgr3ta",
+    "API_KEY": "485638436986578",
+    "API_SECRET": "RyeEK_txPlOUZ9nseD921i7B4Pw",
+}
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+# Templates
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
+
+# WSGI
+WSGI_APPLICATION = "mySite.wsgi.application"
+
+ROOT_URLCONF = "mySite.urls"
+
+
+# Password validation
+AUTH_PASSWORD_VALIDATORS = [
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+]
+
+# Internationalization
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "UTC"
+USE_I18N = True
+USE_TZ = True
+
+# Default primary key
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Security
+SECURE_SSL_REDIRECT = not DEBUG
+
+
 """
 Django settings for mySite project.
 
@@ -8,7 +141,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
-"""
+
 
 from pathlib import Path
 import os
@@ -71,7 +204,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'posts',
     'cloudinary',
-    'cloudinary_storage'
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -173,3 +306,5 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+"""
