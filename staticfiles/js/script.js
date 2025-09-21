@@ -1466,24 +1466,24 @@ const belgianChallengerProTeams = [
   { team: "Club NXT", MP: 28, MW: 14, MD: 5, GF: 46, GA: 35 },
   { team: "Lokeren-Temse", MP: 28, MW: 12, MD: 5, GF: 32, GA: 35 },
   { team: "Lierse K", MP: 28, MW: 11, MD: 7, GF: 40, GA: 35 },
-  { team: "RFC Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
+  { team: "Liege", MP: 28, MW: 9, MD: 7, GF: 38, GA: 44 },
   { team: "Eupen", MP: 28, MW: 8, MD: 6, GF: 38, GA: 47 },
   { team: "Lommel", MP: 28, MW: 8, MD: 5, GF: 32, GA: 46 },
   { team: "Francs Borains", MP: 28, MW: 8, MD: 4, GF: 29, GA: 50 },
   { team: "RSCA Futures", MP: 28, MW: 5, MD: 8, GF: 41, GA: 54 },
-  { team: "RFC Seraing", MP: 28, MW: 3, MD: 10, GF: 28, GA: 55 },
+  { team: "Seraing", MP: 28, MW: 3, MD: 10, GF: 28, GA: 55 },
   { team: "Jong Genk", MP: 28, MW: 3, MD: 5, GF: 30, GA: 62 }
 ];
 
 const belgianChallengerProFixtures = [
-  ["Lommel", "Jong Genk"],
-  ["Lierse K", "Daring Brussels"],
-  ["RFC Liege", "RSCA Futures"],
-  ["Beerschot", "Francs Borains"],
-  ["Eupen", "Patro Eisden"],
-  ["JRFC Seraing", "Jong KAA Gent"],
-  ["Beveren", "Lokeren-Temse"],
-  ["Kotrijk", "Club NXT"],
+  ["ROC Chaleroi", "RSCA Futures"],
+  ["Jong Genk", "Beerschot"],
+  ["Francs Borains", "Seraing"],
+  ["Daring Brussels", "Kotrijk"],
+  ["Liege", "Beveren"],
+  ["Club NXT", "Lommel"],
+  ["Lokeren-Temse", "Eupen"],
+  ["Jong Gent", "Lierse K"],
   //["RFc Liege", "RFC Seraing"]
 ];
 
