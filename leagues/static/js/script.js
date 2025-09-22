@@ -56,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["Liverpool", "Everton"],
-    ["Burnley", "Nottingham"],
-    ["Brighton", "Tottenham"],
-	["West Ham", "Crystal Palace"],
-	["Wolves", "Leeds"],
-	["Manchester United", "Chelsea"],
-	["Fulham", "Brentford"],
-	["Sunderland", "Aston Villa"],
-	["Bournemouth", "Newcastle"],
-	["Arsenal", "Manchester City"]
+    ["Bremtford", "Manchhester United"],
+    ["Leeds", "Bournemouth"],
+    ["Chelsea", "Brighton"],
+	["Manchester City", "Burnley"],
+	["Crystal Palace", "Liverpool"],
+	["Nottingham", "Sunderland"],
+	["Tottenham", "Wolves"],
+	["Aston Villa", "Fulham"],
+	["Newcastle", "Arsenal"],
+	["Everton", "West Ham"]
 	
   ];
 
