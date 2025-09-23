@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const fixtures = [
-    ["Bremtford", "Manchhester United"],
+    ["Brentford", "Manchhester United"],
     ["Leeds", "Bournemouth"],
     ["Chelsea", "Brighton"],
 	["Manchester City", "Burnley"],
@@ -149,15 +149,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Real Betis", "Real Sociedad"],
-    ["Girona", "Levante"],
-    ["Real Madrid", "Espanyol"],
-    ["Villarreal", "Osasuna"],
-	["Alaves", "Sevilla"],
-	["Valencia", "Athletic Club"],
-	["Rayo Vallecano", "Celta Vigo"],
-	["Mallorca", "Atletico Madrid"],
-	["Elche", "Real Oviedo"],
+    ["Espanyol", "Valencia"],
+    ["Athletic Club", "Girona"],
+    ["Sevilla", "Villarreal"],
+    ["Levante", "Real Madrid"],
+	["Getafe", "Alaves"],
+	["Real Sociedad", "Mallorca"],
+	["Atletico Madrid", "Rayo Vallecano"],
+	["Oviedo", "Barcelona"],
+	["Osasuna", "Elche"],
 	["Barcelona", "Getafe"]
   
   ];
@@ -247,18 +247,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishChampionshipFixtures = [
-   ["Middlesbrough", "West Brom"],
-   ["QPR", "Stoke"],
-    ["Birmingham", "Swansea"],
-	["Leicester", "Coventry"],
-	["Blackburn", "Ipswich"],
-	["Derby County", "Preston"],
-  ["Hull", "Southampton"],
-  ["Portsmouth", "Sheffield Wednesday"],
-  ["Sheffield United", "Charlton"],
-  ["Norwich", "Wrexham"],
-  ["Bristol", "Oxford"],
-  ["Millwall", "Watford"]
+   ["West Brom", "Leicester"],
+   ["Coventry", "Birmingham"],
+    ["Wrexham", "Derby County"],
+	["Swansea", "Millwall"],
+	["Ipswich", "Porstmouth"],
+	["Charlton", "Blackburn"],
+  ["Southampton", "Middlesbrough"],
+  ["Sheffield Wednesday", "QPR"],
+  ["Stoke", "Norwich"],
+  ["Preston", "Bristol"],
+  ["Watford", "Hull"],
+  ["Oxford", "Sheffield United"]
   ];
 
   englishChampionshipTeams.forEach(t => {
@@ -646,16 +646,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const italianSerieAFixtures = [
-    ["Leece", "Cagliari"],
-    ["Bologna", "Genoa"],
-  ["Verona", "Juventus"], 
-    ["Udinese","Milan"],
-	["Lazio", "Roma"],
-	["Torino", "Atalanta"],
-	["Cremonese", "Parma"],
-	["Fiorentina", "Como"],
-	["Inter", "Sassulo"],
-	["Napoli", "Pisa"]
+    ["Como", "Cremonese"],
+    ["Juventus", "Atalanta"],
+  ["Cagliari", "Inter"], 
+    ["Sassuolo","Udinese"],
+	["Roma", "Verona"],
+	["Pisa", "Fiorentina"],
+	["Leece", "Bologna"],
+	["Milan", "Napoli"],
+	["Parma", "Torino"],
+	["Genoa", "Lazio"]
 	
   ];
 
@@ -835,15 +835,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueOneFixtures = [
-    ["Lyon", "Angers"],
-    ["Nantes", "Rennes"],
-    ["Brest", "Nice"],
-	["Lens", "lille"],
-	["Paris", "Strasbourg"],
-	["Monaco", "Metz"],
-	["Le Havre", "Lorient"],
-	["Auxerre", "Toulouse"],
-	["Marseille", "PSG"],
+    ["Strasbourg", "Marseille"],
+    ["Lorient", "Monaco"],
+    ["Toulouse", "Nantes"],
+	["PSG", "Auxerre"],
+	["Nice", "Paris"],
+	["Lille", "Lyon"],
+	["Angers", "Brest"],
+	["Metz", "Le Havre"],
+	["Rennes", "Lens"],
 	
   ];
 
@@ -1018,15 +1018,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesligaFixtures = [
-    ["Stuttgart", "St. Pauli"],
-    ["Augsburg", "Mainz"],
-    ["Hoffenheim", "Bayern"],
-	["Hamburger", "Heidenheim"],
-	["Werder", "Freiburg"],
-	["Leipzig", "Koln"],
-	["Frankfurt", "Union Berlin"],
-	["Leverkusen", "Monchengladbach"],
-	["Dortmund", "Wolfsburg"]
+    ["Bayern", "Werder"],
+    ["Mainz", "Dortmund"],
+    ["Heidenheim", "Augsburg"],
+	["St. Pauli", "Leverkusen"],
+	["Wolfsburg", "Leipzig"],
+	["Monchengladbach", "Frankfurt"],
+	["Freiburg", "Hoffenheim"],
+	["Koln", "Stuttgart"],
+	["Union Berlin", "Hamburger"]
 	
 	
   ];
@@ -1203,16 +1203,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const netherlandsEredevesieFixtures = [
-  ["Feyenoord", "Fortuna Sittard"],
-  ["Sparta Rotterdam", "Twente"],
-  ["Groningen", "Telstar"],
-	["Fortuna Sittard", "Utrecht"],
-	["NAC", "Heracles"],
-	["Zwolle", "Go Ahead Eagles"],
-["Heerenveen", "NEC"],
-	["AZ Alkmaar", "Feyenoord"],
-	["AZ Alkmaar", "Zwolle"],
-//  ["NAC", "Fortuna Sittard"]
+  ["AZ Alkmaar", "Zwolle"],
+  ["Twente", "Fortuna Sittard"],
+  ["Ajax", "NAC"],
+	["Volendam", "Zwolle"],
+	["Excelsior", "PSV"],
+	["Heracles", "Sparta Rotterdam"],
+["NEC", "AZ Alkmaar"],
+	["Utrecht", "Heerenveen"],
+	["Groningen", "Feyenoord"],
+  ["Telstar", "Go Ahead Eagles"]
 	
 	
   ];
@@ -1296,16 +1296,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const eersteDivisieFixtures = [
-    ["Roda", "Waalwijk"],
-    ["Eidhoven", "TOP Oss"],
-	["Wilhelm II", "Jong Ajax"],
-	["Emmen", "Dordrecht"],
-	["Den Haag", "Almere"],
-	["Vitesse", "Helmond"],
-	["VVV", "MVV"],
-	["Jong AZ", "De Grafschaap"],
-	["Jong PSV", "Den Dosch"],
-	["Jong Utrecht", "Cambuur"]
+    ["Dordrecht", "De Grafschaap"],
+    ["Almere", "Jong Utrecht"],
+	["Den Bosch", "Jong AZ"],
+	["MVV", "Emmen"],
+	["Jong Ajax", "VVV"],
+	["Helmond", "Eindhoven"],
+	["Waalwijk", "Den Haag"],
+	["Cambuur", "Jong PSV"],
+	["TOP Oss", "Roda"],
+	["Vitesse", "Wilhelm II"]
   ];
 
   eersteDivisieTeams.forEach(t => {

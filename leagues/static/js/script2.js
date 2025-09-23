@@ -116,16 +116,16 @@ const leagues =[
     { team: "Southampton", MP: 38, MW: 2, MD: 6, GF: 26, GA: 86 },
         ],
         matches: [
-   ["Liverpool", "Everton"],
-    ["Burnley", "Nottingham"],
-    ["Brighton", "Tottenham"],
-	["West Ham", "Crystal Palace"],
-	["Wolves", "Leeds"],
-	["Manchester United", "Chelsea"],
-	["Fulham", "Brentford"],
-	["Sunderland", "Aston Villa"],
-	["Bournemouth", "Newcastle"],
-	["Arsenal", "Manchester City"]
+   ["Brentford", "Manchhester United"],
+    ["Leeds", "Bournemouth"],
+    ["Chelsea", "Brighton"],
+	["Manchester City", "Burnley"],
+	["Crystal Palace", "Liverpool"],
+	["Nottingham", "Sunderland"],
+	["Tottenham", "Wolves"],
+	["Aston Villa", "Fulham"],
+	["Newcastle", "Arsenal"],
+	["Everton", "West Ham"]
   ]
         
     },
@@ -156,15 +156,15 @@ const leagues =[
 	{ team: "Valladolid", MP: 38, MW: 4, MD: 4, GF: 26, GA: 90 },
         ],
         matches:[
-            ["Real Betis", "Real Sociedad"],
-    ["Girona", "Levante"],
-    ["Real Madrid", "Espanyol"],
-    ["Villarreal", "Osasuna"],
-	["Alaves", "Sevilla"],
-	["Valencia", "Athletic Club"],
-	["Rayo Vallecano", "Celta Vigo"],
-	["Mallorca", "Atletico Madrid"],
-	["Elche", "Real Oviedo"],
+           ["Espanyol", "Valencia"],
+    ["Athletic Club", "Girona"],
+    ["Sevilla", "Villarreal"],
+    ["Levante", "Real Madrid"],
+	["Getafe", "Alaves"],
+	["Real Sociedad", "Mallorca"],
+	["Atletico Madrid", "Rayo Vallecano"],
+	["Oviedo", "Barcelona"],
+	["Osasuna", "Elche"],
 	["Barcelona", "Getafe"]
         ]
     },
@@ -199,18 +199,18 @@ const leagues =[
 	{ team: "Cardiff", MP: 46, MW: 9, MD: 17, GF: 48, GA: 73 },
         ],
         matches:[
-          ["Middlesbrough", "West Brom"],
-   ["QPR", "Stoke"],
-    ["Birmingham", "Swansea"],
-	["Leicester", "Coventry"],
-	["Blackburn", "Ipswich"],
-	["Derby County", "Preston"],
-  ["Hull", "Southampton"],
-  ["Portsmouth", "Sheffield Wednesday"],
-  ["Sheffield United", "Charlton"],
-  ["Norwich", "Wrexham"],
-  ["Bristol", "Oxford"],
-  ["Millwall", "Watford"]
+         ["West Brom", "Leicester"],
+   ["Coventry", "Birmingham"],
+    ["Wrexham", "Derby County"],
+	["Swansea", "Millwall"],
+	["Ipswich", "Porstmouth"],
+	["Charlton", "Blackburn"],
+  ["Southampton", "Middlesbrough"],
+  ["Sheffield Wednesday", "QPR"],
+  ["Stoke", "Norwich"],
+  ["Preston", "Bristol"],
+  ["Watford", "Hull"],
+  ["Oxford", "Sheffield United"]
         ]
     },
 
@@ -375,16 +375,16 @@ const leagues =[
 	{ team: "Monza", MP: 38, MW: 3, MD: 9, GF: 28, GA: 69 },
         ],
         matches:[
-        ["Leece", "Cagliari"],
-    ["Bologna", "Genoa"],
-  ["Verona", "Juventus"], 
-    ["Udinese","Milan"],
-	["Lazio", "Roma"],
-	["Torino", "Atalanta"],
-	["Cremonese", "Parma"],
-	["Fiorentina", "Como"],
-	["Inter", "Sassulo"],
-	["Napoli", "Pisa"]
+         ["Como", "Cremonese"],
+    ["Juventus", "Atalanta"],
+  ["Cagliari", "Inter"], 
+    ["Sassuolo","Udinese"],
+	["Roma", "Verona"],
+	["Pisa", "Fiorentina"],
+	["Leece", "Bologna"],
+	["Milan", "Napoli"],
+	["Parma", "Torino"],
+	["Genoa", "Lazio"]
         ]
     },
 
@@ -414,15 +414,15 @@ const leagues =[
 	
         ],
         matches:[
-          ["Lyon", "Angers"],
-    ["Nantes", "Rennes"],
-    ["Brest", "Nice"],
-	["Lens", "lille"],
-	["Paris", "Strasbourg"],
-	["Monaco", "Metz"],
-	["Le Havre", "Lorient"],
-	["Auxerre", "Toulouse"],
-	["Marseille", "PSG"],
+           ["Strasbourg", "Marseille"],
+    ["Lorient", "Monaco"],
+    ["Toulouse", "Nantes"],
+	["PSG", "Auxerre"],
+	["Nice", "Paris"],
+	["Lille", "Lyon"],
+	["Angers", "Brest"],
+	["Metz", "Le Havre"],
+	["Rennes", "Lens"],
         ]
     },
 
@@ -488,15 +488,15 @@ const leagues =[
 	
         ],
         matches:[
-        ["Stuttgart", "St. Pauli"],
-    ["Augsburg", "Mainz"],
-    ["Hoffenheim", "Bayern"],
-	["Hamburger", "Heidenheim"],
-	["Werder", "Freiburg"],
-	["Leipzig", "Koln"],
-	["Frankfurt", "Union Berlin"],
-	["Leverkusen", "Monchengladbach"],
-	["Dortmund", "Wolfsburg"]
+        ["Bayern", "Werder"],
+    ["Mainz", "Dortmund"],
+    ["Heidenheim", "Augsburg"],
+	["St. Pauli", "Leverkusen"],
+	["Wolfsburg", "Leipzig"],
+	["Monchengladbach", "Frankfurt"],
+	["Freiburg", "Hoffenheim"],
+	["Koln", "Stuttgart"],
+	["Union Berlin", "Hamburger"]
 	
         ]
     },
@@ -596,15 +596,16 @@ const leagues =[
 	{ team: "Almere", MP: 34, MW: 4, MD: 10, GF: 23, GA: 79 },
   ],
   matches: [
-    ["Feyenoord", "Fortuna Sittard"],
-  ["Sparta Rotterdam", "Twente"],
-  ["Groningen", "Telstar"],
-	["Fortuna Sittard", "Utrecht"],
-	["NAC", "Heracles"],
-	["Zwolle", "Go Ahead Eagles"],
-["Heerenveen", "NEC"],
-	["AZ Alkmaar", "Feyenoord"],
-	["AZ Alkmaar", "Zwolle"],
+     ["AZ Alkmaar", "Zwolle"],
+  ["Twente", "Fortuna Sittard"],
+  ["Ajax", "NAC"],
+	["Volendam", "Zwolle"],
+	["Excelsior", "PSV"],
+	["Heracles", "Sparta Rotterdam"],
+["NEC", "AZ Alkmaar"],
+	["Utrecht", "Heerenveen"],
+	["Groningen", "Feyenoord"],
+  ["Telstar", "Go Ahead Eagles"]
   ]
 },
 
