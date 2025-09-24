@@ -350,18 +350,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueOneFixtures = [
-   ["Bolton", "Wigan"],
-   ["Blackpool", "Barnsley"],
-    ["Lincoln", "Luton"],
-	["Plymouth", "Peterborough"],
-	["Doncaster", "Wimbledon"],
-	["Cardiff", "Bradford"],
-	["Reading", "Leyton Orient"],
-	["Port Vale", "Mansfield"],
-	["Wycombe","Northampton"],
-	["Stevenage", "Exeter"],
-	["Huddersfield", "Burton"],
-	["Rotherham", "Stockport"],
+   ["Leyton Orient", "Stevenage"],
+   ["Wimbledon", "Wycombe"],
+    ["Burton", "Plymouth"],
+	["Wigan", "Cardiff"],
+	["Northampton", "Bolton"],
+	["Stockport", "Reading"],
+	["Barnsley", "Port Vale"],
+	["Peterborough", "Lincoln"],
+	["Exeter","Huddersfield"],
+	["Mansfield", "Rotherham"],
+	["Luton", "Doncaster"],
+	["Bradford", "Blackpool"],
  // ["Bolton", "Reading"]
   ];
 
@@ -454,18 +454,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const englishLeagueTwoFixtures = [
-   ["Cambridge", "Fleetwood"],
-   ["Bromley", "Chesterfield"],
-    ["Cheltenham", "Oldham"],
-	["Shrewsbury", "Salford"],
-	["Barrow", "Crewe"],
-	["Salford", "Swindon"],
-	["Walsall", "Tranmere"],
-	["Colchester", "Bristol Rovers"],
-	["Notts County","Crawley"],
-	["Newport", "Gillingham"],
-	["Barnet", "Grimsby"],
-	["MK Dons", "Accrington Stanley"],
+   ["Crewe", "Notts County"],
+   ["Oldham", "Barnet"],
+    ["Tranmere", "Cambridge"],
+	["Chesterfield", "Newport"],
+	["Grimsby", "Cheltenham"],
+	["Gillingham", "Harrogate"],
+	["Shrewsbury", "MK Dons"],
+	["Fleetwood", "Colchester"],
+	["Bristol","Salford"],
+	["Swindon", "Bromley"],
+	["Crawley", "Barrow"],
+	["Accrington Stanley", "Walsall"],
   ];
 
   englishLeagueTwoTeams.forEach(t => {
@@ -554,17 +554,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laliga2Fixtures = [
-    ["Deportivo", "Huesca"],
-    ["Cultural Leonesa", "Castellon"],
-    ["Andorra", "Mirandes"],
-	["Leganes", "Las Palmas"],
-	["Almeria", "Gijon"],
-	["Ceuta", "Real Zaragoza"],
-	["Albacete", "Valladolid"],
-	["Eibar", "Real Sociedad B"],
-	["Malaga", "Cadiz"],
-	["Cordoba", "Racing"],
-  ["Burgos", "Granada"]
+    ["Mirandes", "Real Zaragoza"],
+    ["Eibar", "Deportivo"],
+    ["Racing", "Andorra"],
+	["Las Palmas", "Almeria"],
+	["Real Sociedad B", "Cordoba"],
+	["Burgos", "Malaga"],
+	["Cadiz", "Ceuta"],
+	["Valladolid", "Cultural Leonesa"],
+	["Gijon", "Albacete"],
+	["Huesca", "Granada"],
+  ["Leganes", "Castellon"]
   ];
 
   laliga2Teams.forEach(t => {
@@ -742,16 +742,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const italianSerieBFixtures = [
-    ["Frisonone", "Sudtirol"],
-    ["Palermo", "Bari"],
-    ["Venezia", "Cesena"],
-	["Reggiana", "Catanzaro"],
-	["Monza", "Sampdoria"],
-	["Pescara", "Empoli"],
-	["Padova", "Virtus Entella"],
-	//["Virtus Entella", "Mantova"],
-	//["Sudtirol", "Palermo"],
-	//["Empoli", "Spezia"]
+    ["Catanzaro", "Juve Stabia"],
+    ["Venezia", "Spezia"],
+  ["Avellino", "Virtus Entella"], 
+    ["Sudtirol","Reggiana"],
+	["Mantova", "Frisonone"],
+	["Cesena", "Palermo"],
+	["Monza", "Padova"],
+	["Bari", "Sampdoria"],
+	["Modena", "Pescara"],
+	["Empoli", "Carrarese"]
+	
 	
   ];
 
@@ -926,15 +927,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const frenchLigueTwoFixtures = [
-    ["Rodez", "Clermont Foot"],
-    ["Dunkerque", "Le Mans"],
-    ["Grenoble Foot", "Annecy"],
-	["Nancy", "Red Star"],
-	["Laval", "Amiens"],
-	["Boulogne", "Pau"],
-	["Montpellier", "Bastia"],
-	["Troyes", "Guingamp"],
-	["St. Etienne", "Reims"]
+    ["Nancy", "Reims"],
+    ["Rodez", "Pau"],
+    ["Grenoble Foot", "Le Mans"],
+	["Grenoble Foot", "Bastia"],
+	["Troyes", "Annecy"],
+	["Dunkerque", "Amiens"],
+	["Laval", "Montpellier"],
+	["Boulogne", "Red Star"],
+	["St. Etienne", "Guingamp"]
 	
 	
   ];
@@ -1111,15 +1112,15 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const germanBundesliga2Fixtures = [
-    ["Arminia", "Greuther Furth"],
-    ["Kaiserslautern", "Preuben Munster"],
-    ["Braunschweig", "Elvesberg"],
-	["Magdeburg", "Schalke"],
-	["Dertha", "Padeborn"],
-	["Nurnberg", "Bochum"],
-	["Dusseldorf", "Darmstadt"],
-	["Holstein Kiel", "Karlsruher"],
-	["Dynamo", "Hannover"]
+    ["Darmstadt", "Dynamo"],
+    ["Shalke", "Greuther Furth"],
+    ["Padeborn", "Kaiserslautern"],
+	["Karlsruher", "Magdeburg"],
+	["Elvesberg", "Holstein Kiel"],
+	["Bochum", "Dusseldorf"],
+	["Preuben Munster", "Braunschweig"],
+	["Hannover", "Arminia"],
+	["Nurnberg", "Hertha"]
         
 	
   ];
