@@ -149,16 +149,20 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const laligaFixtures = [
-    ["Espanyol", "Valencia"],
-    ["Athletic Club", "Girona"],
-    ["Sevilla", "Villarreal"],
-    ["Levante", "Real Madrid"],
-	["Getafe", "Alaves"],
-	["Real Sociedad", "Mallorca"],
-	["Atletico Madrid", "Rayo Vallecano"],
-	["Oviedo", "Barcelona"],
-	["Osasuna", "Elche"],
-	["Barcelona", "Getafe"]
+    ["Osasuna", "Elche"],
+    ["Oviedo", "Barcelona"],
+	["Girona", "Espanyol"],
+    ["Getafe", "Levante"],
+    ["Atletico Madrid", "Real Madrid"],
+    ["Mallorca", "Alaves"],
+    ["Villarreal", "Athletic Club"],
+	["Rayo Vallecano", "Sevilla"],
+	["Elche", "Celta Vigo"],
+	["Barcelona", "Real Sociedad"],
+  ["Real Betis", "Osasuna"],
+  ["Valencia", "Oviedo"],
+	
+	
   
   ];
 
