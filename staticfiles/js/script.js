@@ -1208,7 +1208,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const netherlandsEredevesieFixtures = [
-  ["AZ Alkmaar", "Zwolle"],
   ["Twente", "Fortuna Sittard"],
   ["Ajax", "NAC"],
 	["Volendam", "Zwolle"],
