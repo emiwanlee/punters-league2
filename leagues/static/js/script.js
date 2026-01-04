@@ -63,16 +63,16 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const fixtures = [
-    ["Manchester United", "Newcastle"],
-    ["Nottingham", "Manchester City"],
-    ["West Ham", "Fulham"],
-	["Brentford", "Bournemouth"],
-	["Liverpool", "Wolves"],
-	["Arsenal", "Brighton"],
-	["Burnley", "Everton"],
-	["Chelsea", "Aston Villa"],
-	["Sunderland", "Leeds"],
-	["Crystal Palace", "Tottenham"]
+    ["West Ham", "Nottingham"],
+    ["Crystal Palace", "Aston Villa"],
+    ["Fulham", "Chelsea"],
+	["Brentford", "Sunderland"],
+	["Bournemouth", "Tottenham"],
+	["Manchester City", "Brighton"],
+	["Everton", "Wolves"],
+	["Burnley", "Manchester United"],
+	["Newcastle", "Leeds"],
+	["Arsenal", "Liverpool"]
 	
   ];
 
@@ -156,16 +156,16 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const laligaFixtures = [
-    ["Rayo Vallecano", "Getafe"],
-    ["Celta Vigo", "Valencia"],
-	["Osasuna", "Athletic Club"],
-    ["Elche", "Villarreal"],
-    ["Espanyol", "Barcelona"],
-    ["Sevilla", "Levante"],
-    ["Reak Madrid", "Real Betis"],
-	["Mallorca", "Girona"],
-	["Alaves", "Oviedo"],
-	["Real Sociedad", "Atletico Madrid"],
+    ["Getafe", "Real Sociedad"],
+    ["Oviedo", "Real Betis"],
+	["Villrreal", "Alaves"],
+    ["Girona", "Oasuna"],
+    ["Valencia", "Elche"],
+    ["Rayo Vallecano", "Mallorca"],
+    ["Levante", "Espanyol"],
+	["Sevilla", "Celta Vigo"],
+	//["Alaves", "Oviedo"],
+	//["Real Sociedad", "Atletico Madrid"],
   //["Real Betis", "Osasuna"],
  //["Valencia", "Oviedo"],
 	
@@ -258,18 +258,18 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const englishChampionshipFixtures = [
-   ["Birmingham", "Derby County"],
-   ["Millwall", "Ipswich"],
-    ["Oxford", "Southampton"],
-	["Portsmouth", "QPR"],
-	["West Brom", "Bristol City"],
-	["Stoke", "Preston"],
-  ["Middlesbrough", "Blackburn"],
-  ["Leicester", "Watford"],
-  ["Coventry", "Swansea"],
-  ["Sheffield Wedbesday", "Hull"],
-  ["Norwich", "Charlton"],
-  ["Wrexham", "Sheffield United"]
+   ["Birmingham", "Coventry"],
+   ["Sheffield United", "Oxford"],
+    ["QPR", "Sheffield Wednesday"],
+	["Portsmouth", "Ipswich"],
+	["Milwall", "Swansea"],
+	["Middlesbrough", "Southampton"],
+  ["Bristol City", "Preston"],
+  ["Derby County", "Wrexham"],
+  ["Norwich", "Stoke"],
+  ["Hull", "Watford"],
+  ["Blackburn", "Charlton"],
+  ["Leicester", "West Brom"]
   ];
 
   englishChampionshipTeams.forEach(t => {
@@ -361,19 +361,19 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const englishLeagueOneFixtures = [
-   ["Cardiff", "Exeter"],
-   ["Stockport", "Lincoln"],
-    ["Luton", "Wycombe"],
-	["Plymouth", "Reading"],
-	["Barnsley", "Mansfield"],
+   ["Lincoln", "Peterborough"],
+   ["Bolton", "Northampton"],
+    ["Rotherham", "Mansfield"],
+	["Stevenage", "Leyton Orient"],
+	["Plymouth", "Burton"],
 	["Burton", "Northampton"],
-	["Peterborough", "Leyton Orient"],
-	["Wimbledon", "Stevenage"],
-	["Bradford","Wigan"],
-	["Bolton", "Rotherham"],
-	["Blackpool", "Doncaster"],
-	["Huddersfield", "Port Vale"],
- // ["Portvale", "Stockport"],
+	["Huddersfield", "Exeter"],
+	["Wycombe", "Wimbledon"],
+	["Doncaster","Luton"],
+	["Reading", "Stockport"],
+	["Port Vale", "Barnsley"],
+	["Cardiff", "Wigan"],
+  ["Blackpool", "Bradford"],
   //["Port Vale", "Northampton"]
   ];
 
@@ -466,18 +466,18 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const englishLeagueTwoFixtures = [
-   ["MK Dons", "Swindon"],
-   ["Chesterfield", "Notts County"],
-    ["Grimsby", "Oldham"],
-	["Crawley", "Colchester"],
-	["Tranmere", "Fleetwood"],
-	["Cheltenham", "Shrewsbury"],
-	["Walsall", "Crewe"],
-	["Accrington Stanley", "Barrow"],
-	["Bristol","Bromley"],
-	["Gillingham", "Cambridge"],
-	["Salford", "Harrogate"],
-	["Newport", "Barnet"],
+   ["Cheltenham", "Crawley"],
+   ["MK Dons", "Chesterfield"],
+    ["Bromley", "Oldham"],
+	["Walsall", "Fleetwood"],
+	["Barnet", "Crewe"],
+	["Salford", "Shrewsbury"],
+	["Harrogate", "Swindon"],
+	["Newport", "Tranmere"],
+	["Notts County","Gillingham"],
+	["Cambridge", "Grimsby"],
+	["Colchester", "Accrington Stanley"],
+	["Barrow", "Bristol Rovers"],
   ];
 
   englishLeagueTwoTeams.forEach(t => {
@@ -566,17 +566,17 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const laliga2Fixtures = [
-    ["Eibar", "Mirandes"],
-    ["Cultural Leonesa", "Real Real Sociedad B"],
-    ["Almeria", "Granada"],
-	["Castellon", "Huesca"],
-	["Valladolid", "Racing"],
-	["Cordoba", "Burgos"],
-	["Gijon", "Malaga"],
-	["Ceuta", "Andorra"],
-	["Zaragoza", "Las Palmas"],
-	["Albacete", "Leganes"],
-  ["Deportivo", "Cadiz"]
+    ["Cadiz", "Gijon"],
+    ["Mirandes", "Almeria"],
+    ["Andorra", "Cultural Leonesa"],
+	["Real Real Sociedad B", "Albacete"],
+	["Burgos", "Eibar"],
+	["Las Palmas", "Deportivo"],
+	["Racing", "Zaragoza"],
+	["Leganes", "Valladollid"],
+	["Malaga", "Ceuta"],
+	["Granada", "Castellon"],
+  ["Huesca", "Cordoba"]
   ];
 
   laliga2Teams.forEach(t => {
@@ -658,16 +658,16 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const italianSerieAFixtures = [
-    ["Parma", "Fiorentina"],
-    ["Torino", "Cagliari"], 
-  ["Leece", "Como"],
-    ["Udinese","Lazio"],
-	["Pisa", "Juventus"],
-	["Milan", "Verona"],
-	["Cremonese", "Napoli"],
-	["Bologna", "Sassuolo"],
-	["Atalanta", "Inter"],
-	["Roma", "Genoa"]
+    ["Pisa", "Como"],
+    ["Leece", "Roma"], 
+  ["Sassuolo", "Juventus"],
+    ["Bologna","Atalanta"],
+	["Napoli", "Verona"],
+	["Parma", "Inter"],
+	["Torino", "Udinese"],
+	["Lazio", "Fiorentina"],
+	["Cremonese", "Cagliari"],
+	["Milan", "Genoa"]
 	
   ];
 
@@ -754,16 +754,16 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const italianSerieBFixtures = [
-    ["Modena", "Monza"],
-    ["Spezia", "Pescara"],
-  ["Carrarese", "Mantova"], 
-    ["Empoli","Frisonone"],
-	["Catanzaro", "Cesena"],
-	["Juve Stabia", "Sudtirol"],
-	["Venezia", "Virtus Entella"],
-	["Sampdoria", "Reggiana"],
-	["Palermo", "Padova"],
-	["Bari", "Avellino"]
+    ["Reggiana", "Venezia"],
+    ["Virtus Entella", "Monza"],
+  ["Frisonone", "Catanzaro"], 
+    ["Avellino","Sampdoria"],
+	["Carrarese", "Bari"],
+	["Sudtirol", "Spezia"],
+	["Juve Stabia", "Pescara"],
+	["Cesena", "Empoli"],
+	["Mantova", "Palermo"],
+	["Padova", "Modena"]
 	
 	
   ];
@@ -848,15 +848,15 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const frenchLigueOneFixtures = [
-    ["Toulouse", "Lens"],
-    ["Monaco", "Lyon"],
-    ["Nice", "Strasbourg"],
-    ["Lille", "Rennes"],
-	["Marseille", "Nantes"],
-	["Brest", "Auxerre"],
-	["Lorient", "Metz"],
-	["Le Havre", "Angers"],
-	["PSG", "Paris"],
+    ["Monaco", "Lorient"],
+    ["PSG", "Lille"],
+    ["Lens", "Auxerre"],
+    ["Toulouse", "Nice"],
+	["Angers", "Marseille"],
+	["Strasbourg", "Metz"],
+	["Rennes", "Le Havre"],
+	["Nantes", "Paris"],
+	["Lyon", "Brest"],
 	
 	
   ];
@@ -940,15 +940,15 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
   ];
 
   const frenchLigueTwoFixtures = [
-    ["Troyes", "Red Star"],
-    ["Le Mans", "St. Etienne"],
-    ["Reims", "Annecy"],
-	["Amiens", "Nancy"],
-	["Clermont Foot", "Laval"],
-	["Pau", "Rodez"],
-	["Bastia", "Grenoble"],
-	["Guingamp", "Boulogne"],
-	["Montpellier", "Dunkerque"]
+    ["Laval", "Bastia"],
+    ["Rodez", "Le Mans"],
+    ["Dunkerque", "Pau"],
+	["Boulogne", "Montpellier"],
+	["Grenoble", "Red Star"],
+	["Troyes", "Reims"],
+	["St. Etienne", "Clermont Foot"],
+	["Nancy", "Guingamp"],
+	//["Montpellier", "Dunkerque"]
 	
 	
   ];
@@ -1407,14 +1407,14 @@ const LigaPortugal2TableBody = document.querySelector("#LigaPortugal2ScoresTable
 ];
 
 const belgianProLeagueFixtures = [
-  ["Genk", "Club Brugge"],
-  ["Cercle Brugge", "Union Saint Gilloise"],
-   ["Standard", "STVV"],
-  ["Anderlecht", "Charleroi"],
-  ["Antwerp", "Zulte Waregem"],
-  ["La Louviere", "Oud Heverlee Leuven"],
-  ["Mechelen", "Dender"],
-  ["Gent", "Westerlo"]
+  ["Club Brugge", "La louviere"],
+  ["Zulte Waregem", "Genk"],
+   ["Westerlo", "Cecle Brugge"],
+  ["Union Saint Gilloise", "Mechelen"],
+  ["Gent", "Anderlecht"],
+  ["Dender", "Antwerp"],
+  ["Charleroi", "Standard"],
+  ["STVV", "Oud Heverlee Leuven"]
 ];
 
 
@@ -1499,14 +1499,14 @@ const belgianChallengerProTeams = [
 ];
 
 const belgianChallengerProFixtures = [
-  ["ROC", "Lommel"],
-  ["Beerschor", "Jong Gent"],
-  ["Lierse K", "Kotrijk"],
-  ["Club NXT", "Daring Brussels"],
-  ["RSCA Futures", "Francs Borains"],
-  ["Jong Genk", "Beveren"],
-  ["Liege", "Lokeren-Temse"],
-  ["patro Eisden", "Eupen"],
+  ["Jong Genk", "Lommel"],
+  ["Seraing", "Daring Bruseels"],
+  ["RSCA Fututes", "Jong Gent"],
+  ["Patro Eisden", "Kotrijk"],
+  ["Liege", "Francs Borains"],
+  ["Eupen", "Beveren"],
+  ["Club NXT", "Lokeren-Temse"],
+  ["Beerschot", "ROC Charleroi"],
   //["RFc Liege", "RFC Seraing"]
 ];
 
@@ -1591,14 +1591,14 @@ if (belgianChallengerProPredictionBody) {
 ];
 
 const AustralianALeagueFixtures = [
-  ["Macarthur", "Brisbane Roar"],
-  ["Western Sydney", "Auckland"],
-  ["Newcastle Jets", "Sydney"],
-  ["Malbourne City", "Melbourne Victory"],
-  ["Perth Glory", "Adelaide United"],
-  ["Wellington Phoenix", "Central Coast"],
- // ["Lokeren-Temse", "Eupen"],
-  //["Jong Gent", "Lierse K"],
+  ["Macarthur", "Auckland"],
+  ["Melbourne City", "Brisbane Roar"],
+  ["Brisbane Roar", "Brisbane Roar"],
+  ["Malbourne Victory", "Western Sydney"],
+  ["Macarthur", "Sydney"],
+  ["Perth Glory", "Central Coast"],
+  ["Wellington Phoenix", "Adelaide United"],
+  ["Malbourne City", "Newcastle"],
   //["RFc Liege", "RFC Seraing"]
 ];
 
@@ -1789,15 +1789,17 @@ const LigaPortugalTeams = [
 ];
 
 const LigaPortugalFixtures = [
-  ["Estoril", "Braga"],
-  ["Gil Vicente", "Rio Ave"],
-  ["Estrela", "Moreirense"],
-  ["AVS", "Nacional"],
-  ["Tondela", "Casa Pia"],
-  ["Santa Clara", "Arouca"],
-  ["Alverca", "Porto"],
-  ["Benfica", "Familicao"],
-  ["Vitoria", "Sporting"]
+  ["Nacional", "Santa Clara"],
+  ["Moreirense", "Tondela"],
+  ["Sporting", "Casa Pia"],
+  ["Gil Vicente", "Nacional"],
+  ["AVS", "Arouca"],
+  ["Alverca", "Moreirense"],
+  ["Rio Ave", "Benfica"],
+  ["Santa Clara", "Familicao"],
+  ["Tondela", "Braga"],
+  ["Vitoria", "Porto"],
+  ["Esterela", "Estoril"]
 ];
 
 
@@ -1886,15 +1888,19 @@ const LigaPortugal2Teams = [
 ];
 
 const LigaPortugal2Fixtures = [
-  ["Porto B", "Penafiel"],
-  ["Oliveirense", "Chaves"],
-  ["Torreense", "Farense"],
-  ["Leiria", "Felgueiras"],
-  ["Academico", "Farense"],
-  ["Portimonense", "Leixoes"],
-  ["Sporting B", "Vizela"],
-  ["Maritimo", "Benfica B"],
-["Pacos Fereira", "Lusitania Laurosia"]
+  ["Portimonense", "Felgueiras"],
+  ["Porto B", "Sporting B"],
+  ["Oliveirense", "Feirense"],
+  ["Chaves", "Maritimo"],
+  ["Felgueiras", "Leixoes"],
+  ["Farense", "Oliveirense"],
+  ["Panfiel", "Portimonense"],
+  ["Benfica B", "Chaves"],
+["Vizela", "Pacos Fereira"],
+  ["Academico", "Leiria"],
+  ["Lusitania Laurosa", "Maritimo"],
+["Farense", "Porto B"],
+["Sporting B", 'Torreense']
 ];
 
 
