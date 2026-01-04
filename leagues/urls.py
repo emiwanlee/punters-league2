@@ -35,6 +35,7 @@ urlpatterns = [
    # path('', views.index_view, name='index'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('england/', views.England, name="england"),
+    path('australia/', views.Australia, name="australia"),
     path('about/', views.About_us, name="about"),
     path('blog/', views.Blog, name="blog"),
     path('privacy/', views.Privacy, name="privacy"),
@@ -48,6 +49,7 @@ urlpatterns = [
     path('germany/', views.Germany, name="germany"),
     path('france/', views.France, name="france"),
     path('italy/', views.Italy, name="italy"),
+    path('portugal/', views.Portugal, name="portugal"),
     path('', include('posts.urls')),
 
     # ✅ robots.txt as plain text

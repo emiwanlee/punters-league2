@@ -187,6 +187,40 @@ def Belgium(request):
     return render(request, 'home/belgium.html', context) 
 
 
+def Australia(request):
+    australia_a_league= League.objects.get(name="A League")
+    #belgian_challanger_pro = League.objects.get(name="Challenger Pro")
+    
+
+    australia_a_league_teams= Teams.objects.filter(league=australia_a_league).order_by('-points')
+    #belgian_challanger_pro_teams= Teams.objects.filter(league=belgian_challanger_pro).order_by('-points')
+    
+
+    context = {
+        'australia_a_league_teams': australia_a_league_teams,
+        #'belgian_challanger_pro_teams': belgian_challanger_pro_teams,
+          
+
+     }
+    return render(request, 'home/australia.html', context) 
+
+def Portugal(request):
+    liga_portugal= League.objects.get(name="Premeira Liga")
+    liga_portugal_2 = League.objects.get(name="Liga Portugal 2")
+    
+
+    liga_portugal_teams= Teams.objects.filter(league=liga_portugal).order_by('-points')
+    liga_portugal_2_teams= Teams.objects.filter(league=liga_portugal_2).order_by('-points')
+    
+
+    context = {
+        'liga_portugal_teams': liga_portugal_teams,
+        'liga_portugal_2_teams': liga_portugal_2_teams,
+          
+
+     }
+    return render(request, 'home/australia.html', context)
+
 def Scotland(request):
     return render(request, 'home/scotland.html')  
 
